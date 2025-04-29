@@ -1,1 +1,37 @@
-/* 스타일시트 준비중 */
+/* 🔄 반응형 디자인: 모바일 화면용 */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .slider {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .slides img {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+
+    .prev, .next {
+        top: 90%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 6px;
+    }
+}
