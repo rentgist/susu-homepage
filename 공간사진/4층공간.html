@@ -7,26 +7,30 @@
     <style>
         .content {
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+        }
+
+        .content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
 
         .description {
-            font-size: 1.1rem;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
             color: #555;
         }
 
         .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .gallery-container img {
-            width: 90%;
-            max-width: 280px;
+            width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border-radius: 10px;
@@ -84,7 +88,7 @@
 
 <section class="content">
     <h1>4층 공간</h1>
-    <p class="description">탁 트인 천장과 아늑한 조명이 어우러진 4층 공간을 만나보세요.</p>
+    <p class="description">고급스러운 감성과 아늑함이 공존하는 4층 공간을 만나보세요.</p>
     <div class="gallery-container">
         <img src="../assets/floors/4F/4F_1.jpg" alt="4F image 1">
         <img src="../assets/floors/4F/4F_2.jpg" alt="4F image 2">
