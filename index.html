@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    <!-- 상단 네비게이션 바 -->
+    <!-- 상단 네비게이션 -->
     <header>
         <nav class="navbar">
             <div class="logo">Slow House</div>
             <ul class="nav-links">
                 <li><a href="index.html">홈</a></li>
-                <li><a href="예약현황.html">예약 현황</a></li>
+                <li><a href="#" onclick="showCalendar()">예약 현황</a></li>
                 <li class="dropdown">
                     <a href="#">요금&가이드 ▾</a>
                     <ul class="dropdown-menu">
@@ -63,13 +63,21 @@
     <!-- 이미지 슬라이드 -->
     <section class="slider">
         <div class="slides">
-            <img src="assets/slides/slide1.jpg" alt="슬라이드 이미지 1">
-            <img src="assets/slides/slide2.jpg" alt="슬라이드 이미지 2">
-            <img src="assets/slides/slide3.jpg" alt="슬라이드 이미지 3">
+            <img src="assets/slides/slide1.jpg" alt="슬라이드1" class="active">
+            <img src="assets/slides/slide2.jpg" alt="슬라이드2">
+            <img src="assets/slides/slide3.jpg" alt="슬라이드3">
         </div>
-
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- 예약 현황 섹션 (숨겨진 상태로 시작) -->
+    <section id="calendar-section" style="display: none; padding: 40px; text-align: center;">
+        <h2>예약 현황</h2>
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=6760e905bbff6326f3e79f1492986492db028b773d907955ed89e3a2fd66b11d%40group.calendar.google.com&ctz=Asia%2FSeoul"
+            style="border:0" width="800" height="600" frameborder="0" scrolling="no">
+        </iframe>
     </section>
 
 </body>
