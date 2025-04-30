@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html lang="ko">
 <head>
-<meta charset='UTF-8'>
-<title>준비중입니다</title>
+    <meta charset="UTF-8">
+    <title>브라이덜샤워</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-<h1>준비중입니다.</h1>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Slow House</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">홈</a></li>
+            <li><a href="#">예약 현황</a></li>
+            <li class="dropdown">
+                <a href="#">공간 사진 ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+                    <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">테이블 세팅 ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="브라이덜샤워.html">브라이덜샤워</a></li>
+                    <li><a href="생일파티.html">생일파티</a></li>
+                    <li><a href="베이비샤워.html">베이비샤워</a></li>
+                    <li><a href="연말세팅.html">연말세팅</a></li>
+                </ul>
+            </li>
+            <li><a href="../오시는길.html">오시는 길/주차</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <h1>브라이덜샤워</h1>
+    <p class="description">소중한 친구의 결혼을 축하하는 특별한 순간을 위한 브라이덜샤워 공간입니다.</p>
+    <div class="gallery-container">
+        <img src="../assets/table/bridal/bridal_1.jpg" alt="bridal image 1">
+        <img src="../assets/table/bridal/bridal_2.jpg" alt="bridal image 2">
+        <img src="../assets/table/bridal/bridal_3.jpg" alt="bridal image 3">
+        <img src="../assets/table/bridal/bridal_4.jpg" alt="bridal image 4">
+        <img src="../assets/table/bridal/bridal_5.jpg" alt="bridal image 5">
+        <img src="../assets/table/bridal/bridal_6.jpg" alt="bridal image 6">
+        <img src="../assets/table/bridal/bridal_7.jpg" alt="bridal image 7">
+        <img src="../assets/table/bridal/bridal_8.jpg" alt="bridal image 8">
+        <img src="../assets/table/bridal/bridal_9.jpg" alt="bridal image 9">
+        <img src="../assets/table/bridal/bridal_10.jpg" alt="bridal image 10">
+        <img src="../assets/table/bridal/bridal_11.jpg" alt="bridal image 11">
+        <img src="../assets/table/bridal/bridal_12.jpg" alt="bridal image 12">
+    </div>
+</section>
+
 </body>
 </html>
