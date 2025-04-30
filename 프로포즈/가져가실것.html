@@ -1,89 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>가져가실 것</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>가져가실 것</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
 
-        .content {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
 
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 8px;
-        }
+    .logo { font-weight: bold; font-size: 1.3rem; }
 
-        p {
-            line-height: 1.8;
-            margin: 10px 0;
-            color: #444;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0; padding: 0;
+    }
 
-        .center {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #444;
-        }
+    .nav-links li { position: relative; }
 
-        .gallery {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
+    .nav-links a {
+      text-decoration: none; color: #333; font-size: 0.95rem;
+    }
 
-        .gallery img {
-            width: 30%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-    </style>
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+
+    .dropdown-menu li {
+      white-space: nowrap;
+      padding: 5px 20px;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+    }
+
+    p, li {
+      line-height: 1.8;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    .center {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 30%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <div style="padding: 15px 20px; border-bottom: 1px solid #ddd;">
-        <a href="../index.html" style="margin-right: 20px;">홈</a>
-        <a href="../요금가이드/요금안내.html" style="margin-right: 20px;">요금&가이드</a>
-        <a href="../공간사진/3층공간.html" style="margin-right: 20px;">공간 사진</a>
-        <a href="../테이블세팅/브라이덜샤워.html" style="margin-right: 20px;">테이블 세팅</a>
-        <a href="프로포즈가이드.html" style="margin-right: 20px;">프로포즈</a>
-        <a href="../오시는길.html">오시는 길/주차</a>
-    </div>
+<nav class="navbar">
+  <div class="logo">Slow House</div>
+  <ul class="nav-links">
+    <li><a href="../index.html">홈</a></li>
+    <li><a href="#">예약 현황</a></li>
+    <li class="dropdown">
+      <a href="#">요금&가이드 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../요금가이드/요금안내.html">요금 안내</a></li>
+        <li><a href="../요금가이드/드레스.html">드레스</a></li>
+        <li><a href="../요금가이드/안내사항.html">안내 사항</a></li>
+        <li><a href="../요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
+        <li><a href="../요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">공간 사진 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+        <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">테이블 세팅 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+        <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+        <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+        <li><a href="../테이블세팅/연말세팅.html">연말세팅</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">프로포즈 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="프로포즈가이드.html">프로포즈 가이드</a></li>
+        <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
+        <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
+        <li><a href="가져가실것.html">가져가실 것</a></li>
+      </ul>
+    </li>
+    <li><a href="../오시는길.html">오시는 길/주차</a></li>
+  </ul>
 </nav>
 
 <section class="content">
-    <h1>가져가실 것</h1>
+  <h1>가져가실 것</h1>
 
-    <p>• 두 분의 추억을 위해 아래 소품들은 가져가실 수 있습니다.</p>
-    <ul>
-        <li>사진인화지</li>
-        <li>헬륨풍선</li>
-    </ul>
+  <p>• 두 분의 추억을 위해 아래 소품들은 가져가실 수 있습니다.</p>
+  <ul>
+    <li>사진인화지</li>
+    <li>헬륨풍선</li>
+  </ul>
 
-    <p class="center">그 외 소품은 슬로우하우스의 자산으로,<br><strong>절대 가져가시면 안됩니다.</strong></p>
+  <p class="center">그 외 소품은 슬로우하우스의 자산으로,<br>절대 가져가시면 안됩니다.</p>
 
-    <p>• 프로포즈 생활 패키지 신청해주신 고객님께서는 가져가실 수 있도록 쇼핑백이 함께 비치되어 있습니다.</p>
-    <p>• 화병에 담긴 그대로 꽃을 담아 들고 가시면 됩니다. 생화는 관리에 따라 3~7일 정도 살아있을 수 있습니다.</p>
+  <p>• 프로포즈 생활 패키지 신청해주신 고객님께서는 가져가실 수 있도록 쇼핑백이 함께 비치되어 있습니다.</p>
+  <p>• 화병에 담긴 그대로 꽃을 담아 들고 가시면 됩니다. 생화는 관리에 따라 3~7일 정도 살아있을 수 있습니다.</p>
 
-    <div class="gallery">
-        <img src="../assets/propose/customer/customer_1.jpg" alt="customer image 1">
-        <img src="../assets/propose/customer/customer_2.jpg" alt="customer image 2">
-        <img src="../assets/propose/customer/customer_3.jpg" alt="customer image 3">
-    </div>
+  <div class="gallery">
+    <img src="../assets/propose/customer/customer_1.jpg" alt="customer image 1">
+    <img src="../assets/propose/customer/customer_2.jpg" alt="customer image 2">
+    <img src="../assets/propose/customer/customer_3.jpg" alt="customer image 3">
+  </div>
 </section>
 
 </body>
