@@ -4,60 +4,54 @@
   <meta charset="UTF-8">
   <title>프로포즈 가이드</title>
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-    .logo { font-weight: bold; font-size: 1.3rem; }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0; padding: 0;
-    }
-    .nav-links li { position: relative; }
-    .nav-links a {
-      text-decoration: none; color: #333; font-size: 0.95rem;
-    }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%; left: 0;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px 0;
-      z-index: 10;
-    }
-    .dropdown:hover .dropdown-menu { display: block; }
-    .dropdown-menu li {
-      white-space: nowrap;
-      padding: 5px 20px;
-    }
-    .content {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-    h1 { font-size: 1.8rem; margin-bottom: 20px; }
-    h2 { font-size: 1.3rem; margin-top: 50px; border-bottom: 1px solid #ccc; padding-bottom: 8px; }
-    h3 { font-size: 1.1rem; margin-top: 30px; color: #333; }
-    p, li { line-height: 1.8; color: #444; }
-    ul { margin-top: 10px; padding-left: 20px; }
-    .note { text-align: center; margin-top: 40px; color: #666; }
-    .blog-button {
-      display: block; margin: 30px auto;
-      padding: 12px 24px; border: 1px solid #ccc;
-      border-radius: 8px; background: #f9f9f9;
-      text-align: center; text-decoration: none; color: #333;
-    }
-    .blog-button:hover { background: #eee; }
-  </style>
+<style>
+  body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  .logo { font-weight: bold; font-size: 1.3rem; }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0; padding: 0;
+  }
+  .nav-links li { position: relative; }
+  .nav-links a {
+    text-decoration: none; color: #333; font-size: 0.95rem;
+    padding: 8px 10px;
+    display: inline-block;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0;
+    padding: 8px 0;
+    z-index: 1000;
+    pointer-events: auto;
+    min-width: 160px;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu li {
+    white-space: nowrap;
+    padding: 6px 20px;
+  }
+  .dropdown-menu li a {
+    padding: 6px 10px;
+    display: block;
+  }
+</style>
+
 </head>
 <body>
 
