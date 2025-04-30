@@ -4,53 +4,130 @@
   <meta charset="UTF-8">
   <title>프로포즈 가이드</title>
   <link rel="stylesheet" href="../css/style.css">
-<style>
-  body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-  .logo { font-weight: bold; font-size: 1.3rem; }
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0; padding: 0;
-  }
-  .nav-links li { position: relative; }
-  .nav-links a {
-    text-decoration: none; color: #333; font-size: 0.95rem;
-    padding: 8px 10px;
-    display: inline-block;
-  }
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);  /* 약간 아래로 띄움 */
-  left: 0;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 8px 0;
-  z-index: 1000;
-  pointer-events: auto;
-  min-width: 160px;
-}
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+    }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
 
-.nav-links li {
-  position: relative;
-  padding-bottom: 6px;  /* hover가 끊기지 않도록 공간 확보 */
-}
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
 
-</style>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
 
+    .nav-links li {
+      position: relative;
+      padding-bottom: 6px; /* hover 유지 공간 확보 */
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      padding: 8px 10px;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px); /* 약간 아래로 */
+      left: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 8px 0;
+      z-index: 1000;
+      pointer-events: auto;
+      min-width: 160px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      white-space: nowrap;
+      padding: 6px 20px;
+    }
+
+    .dropdown-menu li a {
+      padding: 6px 10px;
+      display: block;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 50px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    p, li {
+      line-height: 1.8;
+      color: #444;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    .blog-button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .blog-button:hover {
+      background: #eee;
+    }
+  </style>
 </head>
 <body>
 
@@ -92,49 +169,4 @@
         <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
         <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
         <li><a href="가져가실것.html">가져가실 것</a></li>
-      </ul>
-    </li>
-    <li><a href="../오시는길.html">오시는 길/주차</a></li>
-  </ul>
-</nav>
-
-<section class="content">
-  <h1>프로포즈 가이드</h1>
-  <p>프로포즈는 간단합니다.</p>
-  <p>청혼을 하는 단 한 번의 기회이기에 그만큼 소중한 순간을 만들어주면 됩니다.</p>
-  <p>하지만 모두가 처음이라 어려울 뿐입니다.<br>그래서 저희가 함께하겠습니다.</p>
-
-  <h2>슬로우하우스가 프로포즈 맛집인 이유❤️</h2>
-
-  <h3>1. 완벽한 서프라이즈 가능!</h3>
-  <ul>
-    <li>✔ 동명동 중심가에 위치해 자연스러운 데이트 동선으로 완벽</li>
-    <li>✔ 2024년 50건이 넘는 프로포즈 진행, 디테일한 상담을 통해 상황에 맞는 ‘시나리오’ 제공</li>
-  </ul>
-
-  <h3>2. 꼼꼼한 상담, 디테일한 준비</h3>
-  <ul>
-    <li>✔ 1:1 밀착 상담을 통해, 니즈에 맞춘 프로포즈 준비</li>
-    <li>✔ 선물, 영상, 꽃다발, 케이크, 편지 등 막막해도 OK</li>
-    <li>✔ 만족도 높은 후기 다수 😊</li>
-  </ul>
-
-  <h3>3. 불편하게 픽업할 필요가 없는 곳</h3>
-  <ul>
-    <li>✔ 꽃, 케이크, 풍선 업체를 따로 고민할 필요 없이 이용 가능</li>
-    <li>✔ 바로 공간에 세팅해드리기에 가져다 주실 필요 ❌ 들고 다닐 필요 ❌</li>
-    <li>✔ 제휴 업체 다수 → 비용/시간 모두 절약</li>
-  </ul>
-
-  <h3>4. 예쁜 세팅과 좋은 가격</h3>
-  <ul>
-    <li>✔ 호텔/대관공간 대비 훨씬 저렴하고 고퀄리티 생활 세팅 포함</li>
-    <li>✔ 가격 대비 만족도 👍</li>
-  </ul>
-
-  <p class="note">더 자세한 정보는 블로그에 적어두었습니다. 확인 부탁드려요!</p>
-  <a class="blog-button" href="https://blog.naver.com/example" target="_blank">📄 프로포즈 정보 더보기</a>
-</section>
-
-</body>
-</html>
+      </ul
