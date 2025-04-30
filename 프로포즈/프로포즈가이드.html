@@ -1,130 +1,211 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>프로포즈 가이드</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>프로포즈 가이드</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        .content {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
 
-        h2 {
-            font-size: 1.4rem;
-            margin-top: 50px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
 
-        h3 {
-            font-size: 1.2rem;
-            margin-top: 30px;
-            color: #333;
-        }
+    .nav-links li {
+      position: relative;
+    }
 
-        p {
-            line-height: 1.8;
-            margin: 10px 0;
-            color: #444;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
 
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      z-index: 10;
+    }
 
-        ul li {
-            margin: 5px 0;
-        }
+    .dropdown-menu li {
+      white-space: nowrap;
+      padding: 5px 20px;
+    }
 
-        .note {
-            text-align: center;
-            margin-top: 40px;
-            color: #666;
-        }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
 
-        .blog-button {
-            display: block;
-            width: fit-content;
-            margin: 30px auto;
-            padding: 12px 24px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
 
-        .blog-button:hover {
-            background-color: #eee;
-        }
-    </style>
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 50px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.8;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    .blog-button {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 12px 24px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    .blog-button:hover {
+      background-color: #eee;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <div style="padding: 15px 20px; border-bottom: 1px solid #ddd;">
-        <a href="../index.html" style="margin-right: 20px;">홈</a>
-        <a href="../요금가이드/요금안내.html" style="margin-right: 20px;">요금&가이드</a>
-        <a href="../공간사진/3층공간.html" style="margin-right: 20px;">공간 사진</a>
-        <a href="../테이블세팅/브라이덜샤워.html" style="margin-right: 20px;">테이블 세팅</a>
-        <a href="프로포즈가이드.html" style="margin-right: 20px; font-weight: bold;">프로포즈</a>
-        <a href="../오시는길.html">오시는 길/주차</a>
-    </div>
+<nav class="navbar">
+  <div class="logo">Slow House</div>
+  <ul class="nav-links">
+    <li><a href="../index.html">홈</a></li>
+    <li><a href="#">예약 현황</a></li>
+    <li class="dropdown">
+      <a href="#">요금&가이드 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../요금가이드/요금안내.html">요금 안내</a></li>
+        <li><a href="../요금가이드/드레스.html">드레스</a></li>
+        <li><a href="../요금가이드/안내사항.html">안내 사항</a></li>
+        <li><a href="../요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
+        <li><a href="../요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">공간 사진 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+        <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">테이블 세팅 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+        <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+        <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+        <li><a href="../테이블세팅/연말세팅.html">연말세팅</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">프로포즈 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="프로포즈가이드.html">프로포즈 가이드</a></li>
+        <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
+        <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
+        <li><a href="가져가실것.html">가져가실 것</a></li>
+      </ul>
+    </li>
+    <li><a href="../오시는길.html">오시는 길/주차</a></li>
+  </ul>
 </nav>
 
 <section class="content">
-    <h1>프로포즈 가이드</h1>
+  <h1>프로포즈 가이드</h1>
+  <p>프로포즈는 간단합니다.</p>
+  <p>청혼을 하는 단 한 번의 기회이기에 그만큼 소중한 순간을 만들어주면 됩니다.</p>
+  <p>하지만 모두가 처음이라 어려울 뿐입니다.<br>그래서 저희가 함께하겠습니다.</p>
 
-    <p>프로포즈는 간단합니다.</p>
-    <p>청혼을 하는 단 한 번의 기회이기에 그만큼 소중한 순간을 만들어주면 됩니다.</p>
-    <p>하지만 모두가 처음이라 어려울 뿐입니다.<br>그래서 저희가 함께하겠습니다.</p>
+  <h2>슬로우하우스가 프로포즈 맛집인 이유❤️</h2>
 
-    <h2>슬로우하우스가 프로포즈 맛집인 이유❤️</h2>
+  <h3>1. 완벽한 서프라이즈 가능!</h3>
+  <ul>
+    <li>✔ 동명동 중심가에 위치해 자연스러운 데이트 동선으로 완벽</li>
+    <li>✔ 2024년 50건이 넘는 프로포즈 진행, 디테일한 상담을 통해 상황에 맞는 ‘시나리오’ 제공</li>
+  </ul>
 
-    <h3>1. 완벽한 서프라이즈 가능!</h3>
-    <ul>
-        <li>✔ 동명동 중심가에 위치해 자연스러운 데이트 동선으로 완벽</li>
-        <li>✔ 2024년 50건이 넘는 프로포즈 진행, 디테일한 상담을 통해 상황에 맞는 ‘시나리오’ 제공</li>
-    </ul>
+  <h3>2. 꼼꼼한 상담, 디테일한 준비</h3>
+  <ul>
+    <li>✔ 1:1 밀착 상담을 통해, 니즈에 맞춘 프로포즈 준비</li>
+    <li>✔ 선물, 영상, 꽃다발, 케이크, 편지 등 막막해도 OK</li>
+    <li>✔ 만족도 높은 후기 다수 😊</li>
+  </ul>
 
-    <h3>2. 꼼꼼한 상담, 디테일한 준비</h3>
-    <ul>
-        <li>✔ 1:1 밀착 상담을 통해, 니즈에 맞춘 프로포즈 준비</li>
-        <li>✔ 선물, 영상, 꽃다발, 케이크, 편지 등 막막해도 OK</li>
-        <li>✔ 만족도 높은 후기 다수 😊</li>
-    </ul>
+  <h3>3. 불편하게 픽업할 필요가 없는 곳</h3>
+  <ul>
+    <li>✔ 꽃, 케이크, 풍선 업체를 따로 고민할 필요 없이 이용 가능</li>
+    <li>✔ 바로 공간에 세팅해드리기에 가져다 주실 필요 ❌ 들고 다닐 필요 ❌</li>
+    <li>✔ 제휴 업체 다수 → 비용/시간 모두 절약</li>
+  </ul>
 
-    <h3>3. 불편하게 픽업할 필요가 없는 곳</h3>
-    <ul>
-        <li>✔ 꽃, 케이크, 풍선 업체를 따로 고민할 필요 없이 이용 가능</li>
-        <li>✔ 바로 공간에 세팅해드리기에 가져다 주실 필요 ❌ 들고 다닐 필요 ❌</li>
-        <li>✔ 제휴 업체 다수 → 비용/시간 모두 절약</li>
-    </ul>
+  <h3>4. 예쁜 세팅과 좋은 가격</h3>
+  <ul>
+    <li>✔ 호텔/대관공간 대비 훨씬 저렴하고 고퀄리티 생활 세팅 포함</li>
+    <li>✔ 가격 대비 만족도 👍</li>
+  </ul>
 
-    <h3>4. 예쁜 세팅과 좋은 가격</h3>
-    <ul>
-        <li>✔ 호텔/대관공간 대비 훨씬 저렴하고 고퀄리티 생활 세팅 포함</li>
-        <li>✔ 가격 대비 만족도 👍</li>
-    </ul>
-
-    <p class="note">더 자세한 정보는 블로그에 적어두었습니다. 확인 부탁드려요!</p>
-    <a class="blog-button" href="https://blog.naver.com/example" target="_blank">📄 프로포즈 정보 더보기</a>
-</section>
-
-</body>
-</html>
+  <p class="note">더 자세한 정보는 블로그에 적어두었습니다. 확인 부탁드려요!</p>
+  <a class="blog-button" href="https://blog.naver.com/example" target="_blank">📄 프로포즈 정보 더보기</a>
+</section
