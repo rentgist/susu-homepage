@@ -27,29 +27,28 @@
     padding: 8px 10px;
     display: inline-block;
   }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; left: 0;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 0;
-    padding: 8px 0;
-    z-index: 1000;
-    pointer-events: auto;
-    min-width: 160px;
-  }
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .dropdown-menu li {
-    white-space: nowrap;
-    padding: 6px 20px;
-  }
-  .dropdown-menu li a {
-    padding: 6px 10px;
-    display: block;
-  }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);  /* 약간 아래로 띄움 */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 8px 0;
+  z-index: 1000;
+  pointer-events: auto;
+  min-width: 160px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-links li {
+  position: relative;
+  padding-bottom: 6px;  /* hover가 끊기지 않도록 공간 확보 */
+}
+
 </style>
 
 </head>
