@@ -1,63 +1,193 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>드레스</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <title>드레스</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 140px 20px 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 40px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+
+    .divider {
+      margin: 60px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .centered-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.1rem;
+    }
+
+    .design-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .design-button a {
+      display: flex;
+      align-items: center;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #333;
+      transition: 0.2s ease;
+    }
+
+    .design-button a:hover {
+      background-color: #eee;
+    }
+
+    .design-button a::before {
+      content: '🧾';
+      font-size: 1.2rem;
+      margin-right: 8px;
+    }
+
+    .small-note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 120px 16px 60px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">Slow House</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">홈</a></li>
-                <li><a href="#" onclick="showCalendar()">예약 현황</a></li>
-                <li class="dropdown">
-                    <a href="#">요금&가이드 ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="요금안내.html">요금 안내</a></li>
-                        <li><a href="드레스.html">드레스</a></li>
-                        <li><a href="안내사항.html">안내 사항</a></li>
-                        <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
-                        <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">공간 사진 ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
-                        <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">테이블 세팅 ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-                        <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
-                        <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
-                        <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">프로포즈 ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
-                        <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
-                        <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
-                        <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
-                    </ul>
-                </li>
-                <li><a href="../오시는길.html">오시는 길/주차</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav class="navbar">
+    <div class="logo">Slow House</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../예약현황.html">예약 현황</a></li>
+      <li class="dropdown">
+        <a href="#">요금&가이드 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="요금안내.html">요금 안내</a></li>
+          <li><a href="드레스.html">드레스</a></li>
+          <li><a href="안내사항.html">안내 사항</a></li>
+          <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
+          <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">공간 사진 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+          <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">테이블 세팅 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+          <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">프로포즈 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+          <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+          <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+          <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="../오시는길.html">오시는 길/주차</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="content">
-        <h1>드레스</h1>
-        <p>아래는 드레스 예시 사진입니다:</p>
-        <img src="../assets/slides/dress_sample.jpg" alt="드레스 예시 이미지" width="600">
-    </section>
+<section class="content">
+  <h1>드레스</h1>
+
+  <h2>공통 안내</h2>
+  <ul>
+    <li>드레스 신청 시 한 팀 당 12벌 배치됩니다.</li>
+    <li>파티룸은 두 개 층으로 운영되며, 동시간 예약 고객님 중 드레스 선택 우선권은 먼저 드레스 관련 연락주신 고객에게 부여됩니다.</li>
+    <li>드레스 디자인은 페이지 하단의 버튼을 클릭하시면 확인하실 수 있습니다.</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <div class="centered-note">
+    슬로우하우스는 고객님의 편의를 위해 두 가지 방식으로 드레스를 대여하고 있습니다.
+  </div>
+
+  <h2>옵션1: Select my dress</h2>
+  <ul>
+    <li>요청 시 원하는 디자인의 드레스를 인원 수에 맞춰 선택 가능(5인 = 5개)</li>
+    <li>총 12벌의 드레스 제공 (24벌 중 랜덤 배치)</li>
+    <li>나머지 드레스는 랜덤 배치로 제공</li>
+    <li>비용: 12벌당 30,000원</li>
+    <li>특징: 원하는 디자인을 선택하여 입을 수 있어 만족스러운 피팅과 사진 가능</li>
+  </ul>
+
+  <h2>옵션2: Risk-free option</h2>
+  <ul>
+    <li>드레스를 현장에서 미리 확인한 후 착용 여부를 결정할 수 있음</li>
+    <li>총 12벌의 드레스 제공 (24벌 중 랜덤 배치)</li>
+    <li>착용을 원하는 경우: 입실 후 10분 이내 입금 완료 후 대여</li>
+    <li>비용: 12벌당 30,000원</li>
+    <li>특징: 드레스 디자인과 실물을 직접 보고 결정 가능 / 단, 원하는 디자인 선택 불가</li>
+  </ul>
+
+  <div class="small-note">
+    ** Risk-free 선택 원하실 경우 톡톡으로 미리 말씀해주세요. 드레스 비치해 두겠습니다! **
+  </div>
+
+  <div class="design-button">
+    <a href="https://blog.naver.com/slowhouse_rent/123456" target="_blank">
+      드레스 디자인 보러가기
+    </a>
+  </div>
+</section>
 
 </body>
 </html>
