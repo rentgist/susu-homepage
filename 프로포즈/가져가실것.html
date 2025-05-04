@@ -4,110 +4,62 @@
   <meta charset="UTF-8">
   <title>가져가실 것</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
   <style>
-    body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      position: relative;
-      z-index: 1000;
-    }
-
-    .logo { font-weight: bold; font-size: 1.3rem; }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links li {
-      position: relative;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-size: 0.95rem;
-      display: block;
-      padding: 8px 0;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px 0;
-      z-index: 999;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu li {
-      white-space: nowrap;
-      padding: 5px 20px;
-    }
-
     .content {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 6px;
-    }
-
-    p, li {
+      padding: 140px 20px 60px;
+      font-family: 'Helvetica Neue', sans-serif;
       line-height: 1.8;
-      color: #444;
-      font-size: 0.95rem;
     }
 
-    ul {
-      margin: 10px 0 20px 20px;
+    .content h1 {
+      font-size: 2.2rem;
+      margin-bottom: 24px;
     }
 
-    .center {
+    .content ul {
+      margin-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 6px;
+    }
+
+    .warning-box {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #444;
       font-weight: bold;
+      background-color: #fff2f2;
+      padding: 20px;
+      border-radius: 10px;
+      color: #b30000;
+      margin: 40px 0;
+      line-height: 1.6;
     }
 
-    .gallery {
+    .gallery-container {
       display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 40px;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 30px;
     }
 
-    .gallery img {
+    .gallery-container img {
       width: 30%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
     @media (max-width: 768px) {
-      .gallery img {
+      .content {
+        padding: 120px 16px 40px;
+      }
+
+      .gallery-container img {
         width: 100%;
       }
     }
@@ -115,70 +67,76 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">Slow House</div>
-  <ul class="nav-links">
-    <li><a href="../index.html">홈</a></li>
-    <li><a href="#">예약 현황</a></li>
-    <li class="dropdown">
-      <a href="#">요금&가이드 ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="../요금가이드/요금안내.html">요금 안내</a></li>
-        <li><a href="../요금가이드/드레스.html">드레스</a></li>
-        <li><a href="../요금가이드/안내사항.html">안내 사항</a></li>
-        <li><a href="../요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
-        <li><a href="../요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Slow House</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">홈</a></li>
+        <li><a href="#" onclick="showCalendar()">예약 현황</a></li>
+        <li class="dropdown">
+          <a href="#">요금&가이드 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../요금가이드/요금안내.html">요금 안내</a></li>
+            <li><a href="../요금가이드/드레스.html">드레스</a></li>
+            <li><a href="../요금가이드/안내사항.html">안내 사항</a></li>
+            <li><a href="../요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
+            <li><a href="../요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">공간 사진 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+            <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">테이블 세팅 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+            <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+            <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+            <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">프로포즈 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="프로포즈가이드.html">프로포즈 가이드</a></li>
+            <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
+            <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
+            <li><a href="가져가실것.html">가져가실 것</a></li>
+          </ul>
+        </li>
+        <li><a href="../오시는길.html">오시는 길/주차</a></li>
       </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">공간 사진 ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
-        <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">테이블 세팅 ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-        <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
-        <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
-        <li><a href="../테이블세팅/연말세팅.html">연말세팅</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">프로포즈 ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="프로포즈가이드.html">프로포즈 가이드</a></li>
-        <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
-        <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
-        <li><a href="가져가실것.html">가져가실 것</a></li>
-      </ul>
-    </li>
-    <li><a href="../오시는길.html">오시는 길/주차</a></li>
-  </ul>
-</nav>
+    </nav>
+  </header>
 
-<section class="content">
-  <h1>가져가실 것</h1>
+  <section class="content">
+    <h1>가져가실 것</h1>
 
-  <p>• 두 분의 추억을 위해 아래 소품들은 가져가실 수 있습니다.</p>
-  <ul>
-    <li>사진인화지</li>
-    <li>헬륨풍선</li>
-  </ul>
+    <p>• 두 분의 추억을 위해 아래 소품들은 가져가실 수 있습니다.</p>
+    <ul>
+      <li>사진인화지</li>
+      <li>헬륨풍선</li>
+    </ul>
 
-  <p class="center">그 외 소품은 슬로우하우스의 자산으로,<br>절대 가져가시면 안됩니다.</p>
+    <div class="warning-box">
+      그 외 소품은 슬로우하우스의 자산으로,<br>
+      <strong>절대 가져가시면 안됩니다.</strong>
+    </div>
 
-  <p>• 프로포즈 생활 패키지 신청해주신 고객님께서는 가져가실 수 있도록 쇼핑백이 함께 비치되어 있습니다.</p>
-  <p>• 화병에 담긴 그대로 꽃을 담아 들고 가시면 됩니다. 생화는 관리에 따라 3~7일 정도 살아있을 수 있습니다.</p>
+    <p>• 프로포즈 생활 패키지 신청해주신 고객님께서는 가져가실 수 있도록 쇼핑백이 함께 비치되어 있습니다.</p>
+    <p>• 화병에 담긴 그대로 꽃을 담아 들고 가시면 됩니다.  
+       생화는 관리에 따라 3~7일 정도 살아있을 수 있습니다.</p>
 
-  <div class="gallery">
-    <img src="../assets/propose/customer/customer_1.jpg" alt="customer image 1">
-    <img src="../assets/propose/customer/customer_2.jpg" alt="customer image 2">
-    <img src="../assets/propose/customer/customer_3.jpg" alt="customer image 3">
-  </div>
-</section>
+    <div class="gallery-container">
+      <img src="../assets/propose/take_1.jpg" alt="customer image 1">
+      <img src="../assets/propose/take_2.jpg" alt="customer image 2">
+      <img src="../assets/propose/take_3.jpg" alt="customer image 3">
+    </div>
+  </section>
 
 </body>
 </html>
