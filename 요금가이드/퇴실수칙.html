@@ -1,61 +1,202 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>퇴실 수칙</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <title>퇴실 수칙</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 140px 20px 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .checklists {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .checklist-box {
+      flex: 1 1 45%;
+      background: #fdf9f7;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .checklist-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #5b4034;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .checklist-subtitle {
+      font-size: 0.95rem;
+      text-align: center;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    .checklist li {
+      margin-bottom: 15px;
+    }
+
+    .checklist li strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #472f2f;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 60px;
+      color: #444;
+    }
+
+    @media screen and (max-width: 768px) {
+      .checklists {
+        flex-direction: column;
+      }
+
+      .checklist-box {
+        flex: 1 1 100%;
+      }
+
+      .content {
+        padding: 120px 16px 60px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">Slow House</div>
-        <ul class="nav-links">
-            <li><a href="../index.html">홈</a></li>
-            <li><a href="#" onclick="showCalendar()">예약 현황</a></li>
-            <li class="dropdown">
-                <a href="#">요금&가이드 ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="요금안내.html">요금 안내</a></li>
-                    <li><a href="드레스.html">드레스</a></li>
-                    <li><a href="안내사항.html">안내 사항</a></li>
-                    <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
-                    <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">공간 사진 ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
-                    <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">테이블 세팅 ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-                    <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
-                    <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
-                    <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">프로포즈 ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
-                    <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
-                    <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
-                    <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
-                </ul>
-            </li>
-            <li><a href="../오시는길.html">오시는 길/주차</a></li>
+  <nav class="navbar">
+    <div class="logo">Slow House</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../예약현황.html">예약 현황</a></li>
+      <li class="dropdown">
+        <a href="#">요금&가이드 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="요금안내.html">요금 안내</a></li>
+          <li><a href="드레스.html">드레스</a></li>
+          <li><a href="안내사항.html">안내 사항</a></li>
+          <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
+          <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
         </ul>
-    </nav>
+      </li>
+      <li class="dropdown">
+        <a href="#">공간 사진 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+          <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">테이블 세팅 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+          <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">프로포즈 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+          <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+          <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+          <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="../오시는길.html">오시는 길/주차</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="content">
-    <h1>퇴실 수칙</h1>
-    <p>퇴실 시 지켜야 할 수칙이나 주의사항을 이곳에 입력할 수 있습니다.</p>
+  <h1>퇴실 체크리스트</h1>
+
+  <div class="checklists">
+    <div class="checklist-box">
+      <div class="checklist-title">slow house 3F<br>check list</div>
+      <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+      <ul class="checklist">
+        <li><strong>1. 냉난방기 전원 끄셨나요?</strong>
+          쇼파 룸 1대, 입구 1대, 침대방 온풍기 1대
+        </li>
+        <li><strong>2. 조명 전원 끄셨나요?</strong></li>
+        <li><strong>3. 음식물 처리 및 분리수거 하셨나요?</strong>
+          음식물은 화장실 내 음식물 통에 버리기<br>
+          에어컨 앞에 재활용 가능한 쓰레기 분리수거
+        </li>
+        <li><strong>4. 식기 사용 시, 간단한 세척 하셨나요?</strong>
+          세면대에서 물로만 애벌 세척 후 벤치 위에 놓기
+        </li>
+        <li><strong>5. 이용 소품 원위치 하셨나요?</strong>
+          빔프로젝터/ 테이블 세팅 캔들 전원 off
+        </li>
+      </ul>
+    </div>
+
+    <div class="checklist-box">
+      <div class="checklist-title">slow house 4F<br>check list</div>
+      <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+      <ul class="checklist">
+        <li><strong>1. 냉난방기 전원 끄셨나요?</strong>
+          냉난방기 1대, 온풍기 1대
+        </li>
+        <li><strong>2. 조명 전원 끄셨나요?</strong></li>
+        <li><strong>3. 음식물 처리 및 분리수거 하셨나요?</strong>
+          음식물은 화장실 내 음식물 통에 버리기<br>
+          테라스에 재활용 가능한 쓰레기 분리수거
+        </li>
+        <li><strong>4. 식기 사용 시, 간단한 세척 하셨나요?</strong>
+          세면대에서 물로만 세척 후 유리테이블 위에 놓기
+        </li>
+        <li><strong>5. 이용 소품 원위치 하셨나요?</strong>
+          빔프로젝터/ 테이블 세팅 캔들 전원 off
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    더 나은 공간, 다음 사람을 위해 배려 부탁드립니다 :)
+  </div>
 </section>
 
 </body>
