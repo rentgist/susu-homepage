@@ -1,47 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>드레스</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>안내 사항</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 140px 20px 80px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+    }
+
+    .notice-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .content {
+        padding: 120px 16px 60px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Slow House</div>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="예약현황.html">예약 현황</a></li>
-        <li><a href="#">요금&가이드 ▾</a>
-          <ul class="dropdown">
-            <li><a href="요금안내.html">요금 안내</a></li>
-            <li><a href="드레스.html">드레스</a></li>
-            <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
-            <li><a href="환불보증금.html">환불/보증금</a></li>
-          </ul>
-        </li>
-        <li><a href="#">공간 사진 ▾</a>
-          <ul class="dropdown">
-            <li><a href="3층공간.html">3층 공간</a></li>
-            <li><a href="4층공간.html">4층 공간</a></li>
-          </ul>
-        </li>
-        <li><a href="테이블세팅.html">테이블 세팅</a></li>
-        <li><a href="#">프로포즈 ▾</a>
-          <ul class="dropdown">
-            <li><a href="브라이덜샤워.html">브라이덜샤워</a></li>
-            <li><a href="프로포즈가이드.html">프로포즈 가이드</a></li>
-            <li><a href="3층프로포즈.html">3층 프로포즈</a></li>
-            <li><a href="4층프로포즈.html">4층 프로포즈</a></li>
-            <li><a href="가져가실것.html">가져가실 것</a></li>
-          </ul>
-        </li>
-        <li><a href="오시는길.html">오시는 길/주차</a></li>
-      </ul>
-    </nav>
-  </header>
 
+<header>
+  <nav class="navbar">
+    <div class="logo">Slow House</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../예약현황.html">예약 현황</a></li>
+      <li class="dropdown">
+        <a href="#">요금&가이드 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="요금안내.html">요금 안내</a></li>
+          <li><a href="드레스.html">드레스</a></li>
+          <li><a href="안내사항.html">안내 사항</a></li>
+          <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
+          <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">공간 사진 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+          <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">테이블 세팅 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+          <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">프로포즈 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+          <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+          <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+          <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="../오시는길.html">오시는 길/주차</a></li>
+    </ul>
+  </nav>
+</header>
+  
   <main>
     <h1>드레스</h1>
 
