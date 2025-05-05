@@ -1,60 +1,133 @@
-from pathlib import Path
-
-# 파일 경로 재설정
-output_path = Path("/mnt/data/드레스_with_style.html")
-
-# HTML 콘텐츠 재작성
-html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>드레스 안내</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>드레스</title>
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      color: #222;
+      margin: 0;
+      padding: 0 40px;
+      background-color: #fff;
+      color: #111;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    nav li ul {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ccc;
+      list-style: none;
+      padding: 10px;
+      top: 100%;
+      left: 0;
+    }
+
+    nav li:hover ul {
+      display: block;
+    }
+
     h1 {
       font-size: 28px;
-      margin-bottom: 0.5em;
+      margin-top: 40px;
       border-bottom: 2px solid #000;
-      display: inline-block;
+      padding-bottom: 8px;
     }
+
     h2 {
-      font-size: 22px;
-      margin-top: 2em;
-      color: #444;
-    }
-    .section {
-      margin-bottom: 2em;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .nav a {
-      text-decoration: none;
+      font-size: 20px;
+      margin-top: 32px;
       color: #333;
-      padding: 0.5em;
     }
-    .nav a:hover {
-      color: #fff;
-      background-color: #444;
+
+    h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      color: #555;
+    }
+
+    ul {
+      line-height: 1.7;
+      margin-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .indent {
+      margin-left: 1em;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="index.html">홈</a>
-    <a href="예약현황.html">예약 현황</a>
-    <a href="요금안내.html">요금안내</a>
-    <a href="드레스.html">드레스</a>
-    <a href="퇴실수칙.html">퇴실 수칙</a>
-  </div>
 
+<header>
+  <h2>Slow House</h2>
+  <nav>
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">예약 현황</a></li>
+      <li>
+        <a href="#">요금&가이드</a>
+        <ul>
+          <li><a href="#">요금 안내</a></li>
+          <li><a href="#">드레스</a></li>
+          <li><a href="#">퇴실수칙</a></li>
+          <li><a href="#">환불/보증금</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">공간 사진</a>
+        <ul>
+          <li><a href="#">3층 공간</a></li>
+          <li><a href="#">4층 공간</a></li>
+        </ul>
+      </li>
+      <li><a href="#">테이블 세팅</a></li>
+      <li>
+        <a href="#">프로포즈</a>
+        <ul>
+          <li><a href="#">프로포즈 가이드</a></li>
+          <li><a href="#">3층 프로포즈</a></li>
+          <li><a href="#">4층 프로포즈</a></li>
+          <li><a href="#">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="#">오시는 길/주차</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
   <h1>드레스</h1>
 
   <div class="section">
@@ -69,7 +142,7 @@ html_content = """<!DOCTYPE html>
   <div class="section">
     <h2>옵션1: Select my dress</h2>
     <ul>
-      <li>요청 시 원하는 디자인의 드레스를 인원 수에 맞춰 선택 가능(5인 = 5개)</li>
+      <li>요청 시 원하는 디자인의 드레스를 인원 수에 맞춰 선택 가능 (5인 = 5개)</li>
       <li>총 12벌의 드레스 제공 (24벌 중 랜덤 배치)</li>
       <li>나머지 드레스는 랜덤 배치로 제공</li>
       <li>비용: 12벌당 30,000원</li>
@@ -86,13 +159,13 @@ html_content = """<!DOCTYPE html>
       <li>비용: 12벌당 30,000원</li>
       <li>특징: 드레스 디자인과 실물을 직접 보고 결정 가능 / 단, 원하는 디자인 선택 불가</li>
     </ul>
-    <p>** Risk-free 선택 원하실 경우 톡톡으로 미리 말씀해주세요. 드레스 비치해 두겠습니다! **</p>
+    <p class="indent">** Risk-free 선택 원하실 경우 톡톡으로 미리 말씀해주세요. 드레스 비치해 두겠습니다. **</p>
   </div>
+
+  <div class="section">
+    <a href="https://slowhousedresslink.example">👗 드레스 디자인 보러가기</a>
+  </div>
+</main>
+
 </body>
 </html>
-"""
-
-# 파일 저장
-output_path.write_text(html_content, encoding="utf-8")
-
-output_path.name
