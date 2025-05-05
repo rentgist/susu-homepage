@@ -1,100 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>퇴실 수칙</title>
-    <style>
-        body {
-            font-family: 'Pretendard', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #222;
-        }
-        header {
-            background-color: #fff;
-            padding: 20px 40px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-        }
-        nav {
-            display: flex;
-            gap: 24px;
-            font-size: 15px;
-        }
-        nav a {
-            color: black;
-            text-decoration: none;
-            position: relative;
-        }
-        nav a:hover::after {
-            content: '';
-            height: 2px;
-            background: black;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-        }
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            font-size: 28px;
-            margin-bottom: 4px;
-            border-bottom: 2px solid #333;
-            display: inline-block;
-            padding-bottom: 6px;
-        }
-        .subtitle {
-            text-align: center;
-            margin: 24px 0;
-            color: #444;
-        }
-        .checklist-wrapper {
-            display: flex;
-            gap: 40px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .checklist {
-            flex: 1;
-            min-width: 320px;
-            background: #fdf9f4;
-            padding: 30px 24px;
-            border-radius: 12px;
-            box-shadow: 0 0 4px rgba(0,0,0,0.04);
-        }
-        .checklist-title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 6px;
-        }
-        .checklist-sub {
-            text-align: center;
-            margin-bottom: 18px;
-            color: #555;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        ol li {
-            margin-bottom: 12px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #444;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>드레스</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      color: #333;
+    }
 
+    main.content {
+      max-width: 960px;
+      margin: 140px auto 80px;
+      padding: 0 20px;
+    }
 
-</body></head>
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 50px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 40px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .btn-wrapper {
+      text-align: center;
+      margin: 60px 0 0;
+    }
+
+    .btn-wrapper a {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-wrapper a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      main.content {
+        margin: 120px auto 60px;
+        padding: 0 16px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
   <header>
     <nav class="navbar">
       <div class="logo">Slow House</div>
