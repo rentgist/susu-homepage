@@ -1,92 +1,119 @@
-from pathlib import Path
-
-# 파일 경로 설정
-output_path = Path("/mnt/data/퇴실수칙_fixed.html")
-
-# HTML 콘텐츠 재작성
-html_content = """
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>퇴실 수칙</title>
-    <link rel="stylesheet" href="style.css" />
     <style>
         body {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Pretendard', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             background-color: #fff;
+            color: #222;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        }
+        nav {
+            display: flex;
+            gap: 24px;
+            font-size: 15px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+        nav a:hover::after {
+            content: '';
+            height: 2px;
+            background: black;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
         }
         .container {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         h2 {
             font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             border-bottom: 2px solid #333;
             display: inline-block;
+            padding-bottom: 6px;
         }
-        .subtext {
+        .subtitle {
             text-align: center;
-            margin: 30px 0;
-            font-size: 16px;
-            color: #555;
-        }
-        .checklist-section {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .checklist-box {
-            background-color: #fdf9f4;
-            border-radius: 16px;
-            padding: 30px 40px;
-            width: 500px;
-            box-sizing: border-box;
-        }
-        .checklist-title {
-            background-color: #fdf9f4;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-        .checklist-subtitle {
-            font-size: 16px;
-            text-align: center;
-            margin-bottom: 20px;
+            margin: 24px 0;
             color: #444;
         }
-        .checklist-box ol {
+        .checklist-wrapper {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .checklist {
+            flex: 1;
+            min-width: 320px;
+            background: #fdf9f4;
+            padding: 30px 24px;
+            border-radius: 12px;
+            box-shadow: 0 0 4px rgba(0,0,0,0.04);
+        }
+        .checklist-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .checklist-sub {
+            text-align: center;
+            margin-bottom: 18px;
+            color: #555;
+        }
+        ol {
             padding-left: 20px;
         }
-        .checklist-box li {
+        ol li {
             margin-bottom: 12px;
         }
-        .footer-note {
+        .footer {
             text-align: center;
             margin-top: 40px;
-            font-size: 15px;
+            font-size: 14px;
             color: #444;
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#">홈</a>
+            <a href="#">예약 현황</a>
+            <a href="#">요금&가이드 ▼</a>
+            <a href="#">공간 사진 ▼</a>
+            <a href="#">테이블 세팅 ▼</a>
+            <a href="#">프로포즈 ▼</a>
+            <a href="#">오시는 길/주차</a>
+        </nav>
+    </header>
+
     <div class="container">
         <h2>퇴실 수칙</h2>
-        <p class="subtext">퇴실 전 체크리스트 확인 부탁드립니다 :)</p>
+        <div class="subtitle">퇴실 전 체크리스트 확인 부탁드립니다 :)</div>
 
-        <div class="checklist-section">
-            <div class="checklist-box">
+        <div class="checklist-wrapper">
+            <div class="checklist">
                 <div class="checklist-title">slow house 3F<br/>check list</div>
-                <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+                <div class="checklist-sub">고객님, 퇴실 전 한 번 더 체크해주세요</div>
                 <ol>
                     <li><strong>냉난방기 전원 끄셨나요?</strong><br/>쇼파 룸 1대, 입구 1대, 침대방 온풍기 1대</li>
                     <li><strong>조명 전원 끄셨나요?</strong></li>
@@ -94,12 +121,11 @@ html_content = """
                     <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br/>세면대에서 물로만 애벌 세척 후 벤치 위에 놓기</li>
                     <li><strong>이용 소품 원위치 하셨나요?</strong><br/>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
                 </ol>
-                <div class="footer-note">더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</div>
             </div>
 
-            <div class="checklist-box">
+            <div class="checklist">
                 <div class="checklist-title">slow house 4F<br/>check list</div>
-                <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+                <div class="checklist-sub">고객님, 퇴실 전 한 번 더 체크해주세요</div>
                 <ol>
                     <li><strong>냉난방기 전원 끄셨나요?</strong><br/>냉난방기 1대, 온풍기 1대</li>
                     <li><strong>조명 전원 끄셨나요?</strong></li>
@@ -107,14 +133,11 @@ html_content = """
                     <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br/>세면대에서 물로만 세척 후 유리테이블 위에 놓기</li>
                     <li><strong>이용 소품 원위치 하셨나요?</strong><br/>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
                 </ol>
-                <div class="footer-note">더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</div>
             </div>
         </div>
+
+        <div class="footer">더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</div>
     </div>
 </body>
 </html>
 """
-
-# 파일로 저장
-output_path.write_text(html_content, encoding="utf-8")
-output_path.name
