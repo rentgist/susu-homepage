@@ -1,133 +1,120 @@
 from pathlib import Path
 
-# Define the output path again after session reset
-output_path = Path("/mnt/data/퇴실수칙.html")
+# 파일 경로 설정
+output_path = Path("/mnt/data/퇴실수칙_fixed.html")
 
-# HTML content based on the user's request
+# HTML 콘텐츠 재작성
 html_content = """
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>퇴실 수칙</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/main.js" defer></script>
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    main.content {
-      max-width: 960px;
-      margin: 140px auto 80px;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      border-bottom: 2px solid #333;
-      padding-bottom: 12px;
-    }
-
-    .subtext {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 0.95rem;
-    }
-
-    .checklist-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .checklist-box {
-      flex: 1 1 45%;
-      background: #fcf8f3;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.05);
-    }
-
-    .checklist-box h2 {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .checklist-box p {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    .checklist-box ol {
-      padding-left: 20px;
-      font-size: 0.95rem;
-    }
-
-    .checklist-box ol li {
-      margin-bottom: 8px;
-    }
-
-    .footer-text {
-      text-align: center;
-      font-size: 0.95rem;
-      margin-top: 40px;
-      color: #444;
-    }
-
-    @media screen and (max-width: 768px) {
-      .checklist-container {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>퇴실 수칙</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+        }
+        .subtext {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .checklist-section {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .checklist-box {
+            background-color: #fdf9f4;
+            border-radius: 16px;
+            padding: 30px 40px;
+            width: 500px;
+            box-sizing: border-box;
+        }
+        .checklist-title {
+            background-color: #fdf9f4;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .checklist-subtitle {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .checklist-box ol {
+            padding-left: 20px;
+        }
+        .checklist-box li {
+            margin-bottom: 12px;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 15px;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
-  <main class="content">
-    <h1>퇴실 수칙</h1>
-    <p class="subtext">퇴실 전 체크리스트 확인 부탁드립니다 :)</p>
+    <div class="container">
+        <h2>퇴실 수칙</h2>
+        <p class="subtext">퇴실 전 체크리스트 확인 부탁드립니다 :)</p>
 
-    <div class="checklist-container">
-      <div class="checklist-box">
-        <h2>slow house 3F<br>check list</h2>
-        <p>고객님, 퇴실 전에 한 번 더 체크해주세요</p>
-        <ol>
-          <li><strong>냉난방기 전원 끄셨나요?</strong><br>쇼파 룸 1대, 입구 1대, 침대방 온풍기 1대</li>
-          <li><strong>조명 전원 끄셨나요?</strong></li>
-          <li><strong>음식물 처리 및 분리수거 하셨나요?</strong><br>음식물은 화장실 내 음식물 통에 버리기<br>에어컨 앞 재활용 가능한 쓰레기 분리수거</li>
-          <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br>세면대에서 물로만 애벌 세척 후 벤치 위에 놓기</li>
-          <li><strong>이용 소품 원위치 하셨나요?</strong><br>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
-        </ol>
-        <p>더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</p>
-      </div>
+        <div class="checklist-section">
+            <div class="checklist-box">
+                <div class="checklist-title">slow house 3F<br/>check list</div>
+                <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+                <ol>
+                    <li><strong>냉난방기 전원 끄셨나요?</strong><br/>쇼파 룸 1대, 입구 1대, 침대방 온풍기 1대</li>
+                    <li><strong>조명 전원 끄셨나요?</strong></li>
+                    <li><strong>음식물 처리 및 분리수거 하셨나요?</strong><br/>음식물은 화장실 내 음식물 통에 버리기<br/>에어컨 앞 재활용 가능한 쓰레기 분리수거</li>
+                    <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br/>세면대에서 물로만 애벌 세척 후 벤치 위에 놓기</li>
+                    <li><strong>이용 소품 원위치 하셨나요?</strong><br/>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
+                </ol>
+                <div class="footer-note">더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</div>
+            </div>
 
-      <div class="checklist-box">
-        <h2>slow house 4F<br>check list</h2>
-        <p>고객님, 퇴실 전에 한 번 더 체크해주세요</p>
-        <ol>
-          <li><strong>냉난방기 전원 끄셨나요?</strong><br>냉난방기 1대, 온풍기 1대</li>
-          <li><strong>조명 전원 끄셨나요?</strong></li>
-          <li><strong>음식물 처리 및 분리수거 하셨나요?</strong><br>음식물은 화장실 내 음식물 통에 버리기<br>테라스에 재활용 가능한 쓰레기 분리수거</li>
-          <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br>세면대에서 물로만 세척 후 유리테이블 위에 놓기</li>
-          <li><strong>이용 소품 원위치 하셨나요?</strong><br>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
-        </ol>
-        <p>더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</p>
-      </div>
+            <div class="checklist-box">
+                <div class="checklist-title">slow house 4F<br/>check list</div>
+                <div class="checklist-subtitle">고객님, 퇴실 전 한 번 더 체크해주세요</div>
+                <ol>
+                    <li><strong>냉난방기 전원 끄셨나요?</strong><br/>냉난방기 1대, 온풍기 1대</li>
+                    <li><strong>조명 전원 끄셨나요?</strong></li>
+                    <li><strong>음식물 처리 및 분리수거 하셨나요?</strong><br/>음식물은 화장실 내 음식물 통에 버리기<br/>테라스에 재활용 가능한 쓰레기 분리수거</li>
+                    <li><strong>식기 사용 시, 간단한 세척 하셨나요?</strong><br/>세면대에서 물로만 세척 후 유리테이블 위에 놓기</li>
+                    <li><strong>이용 소품 원위치 하셨나요?</strong><br/>빔프로젝터/ 테이블 세팅 캔들 전원 off</li>
+                </ol>
+                <div class="footer-note">더 나은 공간, 다음 사람을 위해 배려 부탁드립니다</div>
+            </div>
+        </div>
     </div>
-  </main>
 </body>
 </html>
 """
 
-# Write the HTML content to file
+# 파일로 저장
 output_path.write_text(html_content, encoding="utf-8")
-
 output_path.name
