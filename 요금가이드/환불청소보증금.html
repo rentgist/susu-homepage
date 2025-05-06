@@ -4,56 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>환불 / 청소 보증금 - Slow House</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    main.content {
+      max-width: 960px;
+      margin: 140px auto 80px;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+
+    section.refund-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .refund-box {
+      background: #fdf9f4;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.04);
+    }
+
+    .refund-box h2 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      background: #f3eee8;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .refund-box ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .refund-box ul li {
+      margin-bottom: 10px;
+    }
+
+    .refund-box p {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      section.refund-section {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .refund-box {
+        width: 48%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <a href="index.html" class="logo">Slow House</a>
-      <nav>
-        <a href="index.html">홈</a>
-        <a href="예약현황.html">예약 현황</a>
-        <div class="dropdown">
+    <nav class="navbar">
+      <div class="logo">Slow House</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">홈</a></li>
+        <li><a href="../예약현황.html">예약 현황</a></li>
+        <li class="dropdown">
           <a href="#">요금&가이드 ▾</a>
-          <div class="dropdown-content">
-            <a href="요금안내.html">요금 안내</a>
-            <a href="드레스.html">드레스</a>
-            <a href="퇴실수칙.html">퇴실수칙</a>
-            <a href="환불보증금.html">환불/보증금</a>
-          </div>
-        </div>
-        <div class="dropdown">
+          <ul class="dropdown-menu">
+            <li><a href="요금안내.html">요금 안내</a></li>
+            <li><a href="드레스.html">드레스</a></li>
+            <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
+            <li><a href="환불보증금.html">환불/보증금</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a href="#">공간 사진 ▾</a>
-          <div class="dropdown-content">
-            <a href="3층공간.html">3층 공간</a>
-            <a href="4층공간.html">4층 공간</a>
-          </div>
-        </div>
-        <div class="dropdown">
+          <ul class="dropdown-menu">
+            <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+            <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a href="#">테이블 세팅 ▾</a>
-          <div class="dropdown-content">
-            <a href="브라이덜샤워.html">브라이덜샤워</a>
-          </div>
-        </div>
-        <div class="dropdown">
+          <ul class="dropdown-menu">
+            <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a href="#">프로포즈 ▾</a>
-          <div class="dropdown-content">
-            <a href="프로포즈가이드.html">프로포즈 가이드</a>
-            <a href="3층프로포즈.html">3층 프로포즈</a>
-            <a href="4층프로포즈.html">4층 프로포즈</a>
-            <a href="가져가실것.html">가져가실 것</a>
-          </div>
-        </div>
-        <a href="오시는길.html">오시는 길/주차</a>
-      </nav>
-    </div>
+          <ul class="dropdown-menu">
+            <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+            <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+            <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+            <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
+          </ul>
+        </li>
+        <li><a href="../오시는길.html">오시는 길/주차</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="content">
-    <h2>환불 / 청소 보증금</h2>
+    <h1>환불 / 청소 보증금</h1>
     <section class="refund-section">
-      <div class="left">
-        <h3>환불 기준</h3>
+      <div class="refund-box">
+        <h2>환불 기준</h2>
         <ul>
           <li>방문 10일 전 <strong>100% 환불</strong></li>
           <li>6~9일 전 <strong>50% 환불</strong></li>
@@ -61,8 +131,8 @@
         </ul>
         <p>※ 날짜 변경은 이용 <strong>7일 전까지 1회</strong> 가능합니다.</p>
       </div>
-      <div class="right">
-        <h3>청소보증금 반환</h3>
+      <div class="refund-box">
+        <h2>청소보증금 반환</h2>
         <p>청소보증금은 이용 후 문제가 없으면 24시간 내 <strong>자동 반환 신청</strong>됩니다.</p>
         <p>보증금은 페이 결제 수단으로 환불되며, 영업일 기준 <strong>3~5일</strong> 소요될 수 있습니다.</p>
         <p>이 과정은 네이버 결제 시스템 상 소요되는 시간이므로 양해 부탁드립니다.</p>
