@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Slow House</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Slow House</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
-    
-<header>
-  <div class="nav">
-    <a href="/index.html" class="logo">Slow House</a>
-    <nav>
-      <a href="/index.html">홈</a>
-      <a href="/예약현황.html">예약 현황</a>
-      <div class="dropdown">
-        <a href="#">요금&가이드 ▾</a>
-        <div class="dropdown-content">
-          <a href="/요금가이드/요금안내.html">요금 안내</a>
-          <a href="/요금가이드/드레스.html">드레스</a>
-          <a href="/요금가이드/퇴실수칙.html">퇴실수칙</a>
-          <a href="/요금가이드/환불청소보증금.html">환불/보증금</a>
+  <header>
+    <div class="nav">
+      <a href="/" class="logo">Slow House</a>
+      <nav>
+        <a href="/">홈</a>
+        <a href="/예약현황.html">예약 현황</a>
+        <div class="dropdown">
+          <a href="#">요금&가이드 ▾</a>
+          <div class="dropdown-content">
+            <a href="/요금가이드/요금안내.html">요금 안내</a>
+            <a href="/요금가이드/드레스.html">드레스</a>
+            <a href="/요금가이드/퇴실수칙.html">퇴실수칙</a>
+            <a href="/요금가이드/환불청소보증금.html">환불/보증금</a>
+          </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">공간 사진 ▾</a>
-        <div class="dropdown-content">
-          <a href="/공간사진/3층공간.html">3층 공간</a>
-          <a href="/공간사진/4층공간.html">4층 공간</a>
+        <div class="dropdown">
+          <a href="#">공간 사진 ▾</a>
+          <div class="dropdown-content">
+            <a href="/공간사진/3층공간.html">3층 공간</a>
+            <a href="/공간사진/4층공간.html">4층 공간</a>
+          </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">테이블 세팅 ▾</a>
-        <div class="dropdown-content">
-          <a href="/테이블세팅/브라이덜샤워.html">브라이덜샤워</a>
+        <div class="dropdown">
+          <a href="#">테이블 세팅 ▾</a>
+          <div class="dropdown-content">
+            <a href="/테이블세팅/브라이덜샤워.html">브라이덜샤워</a>
+          </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">프로포즈 ▾</a>
-        <div class="dropdown-content">
-          <a href="/프로포즈/프로포즈가이드.html">프로포즈 가이드</a>
-          <a href="/프로포즈/3층프로포즈.html">3층 프로포즈</a>
-          <a href="/프로포즈/4층프로포즈.html">4층 프로포즈</a>
-          <a href="/프로포즈/가져가실것.html">가져가실 것</a>
+        <div class="dropdown">
+          <a href="#">프로포즈 ▾</a>
+          <div class="dropdown-content">
+            <a href="/프로포즈/프로포즈가이드.html">프로포즈 가이드</a>
+            <a href="/프로포즈/3층프로포즈.html">3층 프로포즈</a>
+            <a href="/프로포즈/4층프로포즈.html">4층 프로포즈</a>
+            <a href="/프로포즈/가져가실것.html">가져가실 것</a>
+          </div>
         </div>
-      </div>
-      <a href="/오시는길.html">오시는 길/주차</a>
-    </nav>
-  </div>
-</header>
-
-
-    <!-- 환영 문구 -->
-    <section class="welcome-section">
-        <h1>Welcome to Slow House</h1>
-    </section>
-
-    <!-- 이미지 슬라이드 -->
-    <section class="slider">
-        <div class="slides">
-            <img src="assets/slides/slide1.jpg" alt="슬라이드1" class="active">
-            <img src="assets/slides/slide2.jpg" alt="슬라이드2">
-            <img src="assets/slides/slide3.jpg" alt="슬라이드3">
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </section>
-
-    <!-- 예약 현황 섹션 (숨겨진 상태로 시작) -->
-    <section id="calendar-section" style="display: none; padding: 40px; text-align: center;">
-        <h2>예약 현황</h2>
-        <iframe 
-            src="https://calendar.google.com/calendar/embed?src=6760e905bbff6326f3e79f1492986492db028b773d907955ed89e3a2fd66b11d%40group.calendar.google.com&ctz=Asia%2FSeoul"
-            style="border:0" width="800" height="600" frameborder="0" scrolling="no">
-        </iframe>
-    </section>
-
+        <a href="/오시는길.html">오시는 길/주차</a>
+      </nav>
+    </div>
+  </header>
+  <main class="content">
+    <h1>Welcome to Slow House</h1>
+  </main>
 </body>
 </html>
