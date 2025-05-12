@@ -1,233 +1,101 @@
-/* 기본 PC 스타일 */
+/* 공통 바디 설정 */
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #ffffff;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
 }
 
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
+/* 네비게이션 바 */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    position: relative;
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    color: #888888;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    z-index: 999;
-}
-
-.dropdown-menu li {
-    padding: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.welcome-section {
-    margin-top: 120px;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.welcome-section h1 {
-    font-size: 36px;
-}
-
-.slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.slides img {
-    width: 100%;
-    display: none;
-}
-
-.slides img.active {
-    display: block;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* 🔄 반응형 디자인: 모바일 화면용 */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .slider {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .slides img {
-        width: 100%;
-        height: auto;
-    }
-
-    .welcome-section h1 {
-        font-size: 24px;
-    }
-
-    .prev, .next {
-        top: 90%;
-        transform: translateY(-50%);
-        font-size: 14px;
-        padding: 6px;
-    }
-}
-
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    padding: 20px;
-}
-
-.gallery-container img {
-    width: 30%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-/* 드레스.html 기반 네비게이션 탭 공통화 스타일 추가 */
-.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #eee;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
-.nav .logo {
-  font-size: 1.5rem;
+/* 로고 (Slow House) */
+.logo {
+  font-size: 24px;
   font-weight: bold;
+}
+
+/* 네비게이션 메뉴 */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/* 네비게이션 링크 */
+.nav-links a {
+  text-decoration: none;
   color: black;
-  text-decoration: none;
-}
-
-.nav nav a {
-  margin-left: 1.2rem;
-  text-decoration: none;
-  color: #222;
-  font-size: 1rem;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  position: relative;
 }
 
-.nav nav a:hover {
-  color: #7a5d42;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
+/* 드롭다운 메뉴 */
+.dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: white;
-  min-width: 160px;
-  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
   z-index: 10;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #222;
-  text-decoration: none;
+.dropdown-menu li {
   white-space: nowrap;
+  padding: 5px 20px;
 }
 
-.dropdown-content a:hover {
-  background-color: #f7f7f7;
-}
-
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    padding: 10px 0;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
