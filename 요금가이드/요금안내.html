@@ -3,14 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>요금 안내</title>
-  <!-- 공통 스타일시트 -->
   <link rel="stylesheet" href="/susu-homepage/css/style.css">
-  <!-- 공통 스크립트 -->
   <script src="/susu-homepage/js/main.js" defer></script>
+  <style>
+    /* 본문 레이아웃 */
+    .content { max-width: 960px; margin: 140px auto 80px; padding: 0 20px; }
+    h1 { font-size: 2rem; margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 12px; }
+
+    /* 요금표 컨테이너 */
+    .pricing-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .pricing-section {
+      background-color: #fdfaf6;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .pricing-header {
+      background-color: #f3eee8;
+      padding: 16px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .pricing-list {
+      padding: 20px;
+    }
+    .pricing-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .pricing-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+    .pricing-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* 데스크탑에서는 3단 구성 */
+    @media screen and (min-width: 768px) {
+      .pricing-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .pricing-section {
+        width: 32%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ── 공통 내비게이션 ── -->
+  <!-- 공통 네비게이션 -->
   <nav class="navbar">
     <a href="/susu-homepage/index.html" class="logo">Slow House</a>
     <ul class="nav-links">
@@ -22,7 +72,7 @@
           <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
           <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
           <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
-          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a></li>
+          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -36,8 +86,8 @@
         <a href="#">테이블 세팅 ▾</a>
         <ul class="dropdown-menu">
           <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
           <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
           <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
         </ul>
       </li>
@@ -54,12 +104,50 @@
     </ul>
   </nav>
 
-  <!-- ── 페이지 콘텐츠 ── -->
+  <!-- 페이지 콘텐츠 -->
   <main class="content">
     <h1>요금 안내</h1>
-    <p>이 페이지는 요금과 관련된 상세 안내를 제공합니다.</p>
 
-    <!-- 필요하신 요금표나 설명을 이 아래에 삽입하세요 -->
+    <div class="pricing-wrapper">
+      <!-- 공간대여 -->
+      <div class="pricing-section">
+        <div class="pricing-header">공간대여</div>
+        <div class="pricing-list">
+          <ul>
+            <li><span>주말대여(금–일, 1h)</span><span>30,000원</span></li>
+            <li><span>평일대여(월–목, 1h)</span><span>25,000원</span></li>
+            <li><span>상업 촬영 공간대여</span><span>20,000원</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 테이블 세팅 -->
+      <div class="pricing-section">
+        <div class="pricing-header">테이블 세팅</div>
+        <div class="pricing-list">
+          <ul>
+            <li><span>연말 테이블세팅</span><span>30,000원</span></li>
+            <li><span>파티 테이블세팅<br>(브라이덜샤워, 생일파티, 베이비샤워)</span><span>40,000원</span></li>
+            <li><span>로맨틱 테이블세팅</span><span>30,000원</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 옵션 -->
+      <div class="pricing-section">
+        <div class="pricing-header">옵션</div>
+        <div class="pricing-list">
+          <ul>
+            <li><span>꽃풍선</span><span>20,000원</span></li>
+            <li><span>헬륨풍선(1개)</span><span>3,500원</span></li>
+            <li><span>생화 테이블세팅</span><span>상담</span></li>
+            <li><span>샴페인타워</span><span>25,000원</span></li>
+            <li><span>인원추가</span><span>5,000원</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 </body>
