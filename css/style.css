@@ -1,4 +1,4 @@
-/* 공통 바디 설정 */
+/* ✅ 공통 바디 설정 */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* 네비게이션 바 */
+/* ✅ 네비게이션 바 */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,13 +16,14 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-/* 로고 (Slow House) */
+/* ✅ 로고 (Slow House) */
 .logo {
   font-size: 24px;
   font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* 네비게이션 메뉴 */
+/* ✅ 네비게이션 메뉴 */
 .nav-links {
   list-style: none;
   display: flex;
@@ -35,7 +36,7 @@ body {
   position: relative;
 }
 
-/* 네비게이션 링크 */
+/* ✅ 네비게이션 링크 스타일 */
 .nav-links a {
   text-decoration: none;
   color: black;
@@ -44,7 +45,7 @@ body {
   font-weight: 500;
 }
 
-/* 드롭다운 메뉴 */
+/* ✅ 드롭다운 메뉴 */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -65,7 +66,7 @@ body {
   display: block;
 }
 
-/* 모바일 반응형 */
+/* ✅ 모바일 반응형 스타일 */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -98,61 +99,4 @@ body {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-}
-
-
-/* ✅ 네비게이션 바 공통 스타일 */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  z-index: 10;
-}
-
-.dropdown-menu li {
-  white-space: nowrap;
-  padding: 5px 20px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
