@@ -3,101 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>3층 공간</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/susu-homepage/css/style.css">
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
       padding: 0;
     }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.3rem;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links li {
-      position: relative;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      z-index: 10;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu li {
-      white-space: nowrap;
-      padding: 5px 20px;
-    }
-
     .content {
       max-width: 1000px;
       margin: 0 auto;
       padding: 60px 20px;
     }
-
     h1 {
       font-size: 1.8rem;
       text-align: center;
       margin-bottom: 20px;
     }
-
     .gallery-intro {
       margin-bottom: 40px;
       text-align: center;
     }
-
     .gallery-intro h2 {
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
-
     .gallery-intro p {
       font-size: 1rem;
       color: #444;
       line-height: 1.6;
     }
-
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-
     .gallery img {
       width: 30%;
       aspect-ratio: 1 / 1;
@@ -105,7 +46,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     @media (max-width: 768px) {
       .gallery img {
         width: 100%;
@@ -114,51 +54,50 @@
   </style>
 </head>
 <body>
-  
-  <!-- ✅ 통일된 네비게이션 바 -->
-  <nav class="navbar">
-    <div class="logo">Slow House</div>
-    <ul class="nav-links">
-      <li><a href="/susu-homepage/index.html">홈</a></li>
-      <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
-      <li class="dropdown">
-        <a href="#">요금&가이드 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
-          <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
-          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
-          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">공간 사진 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a></li>
-          <li><a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">테이블 세팅 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
-          <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
-          <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">프로포즈 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
-          <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
-          <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
-          <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
-        </ul>
-      </li>
-      <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
-    </ul>
-  </nav>
 
+<!-- ✅ 통일된 네비게이션 바 -->
+<nav class="navbar">
+  <div class="logo">Slow House</div>
+  <ul class="nav-links">
+    <li><a href="/susu-homepage/index.html">홈</a></li>
+    <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
+    <li class="dropdown">
+      <a href="#">요금&가이드 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
+        <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
+        <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
+        <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">공간 사진 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a></li>
+        <li><a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">테이블 세팅 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+        <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
+        <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
+        <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">프로포즈 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+        <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+        <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+        <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
+      </ul>
+    </li>
+    <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
+  </ul>
+</nav>
 
 <section class="content">
   <h1>3층 공간</h1>
@@ -167,26 +106,24 @@
     <h2>동명동파티룸 & 렌탈스튜디오</h2>
     <p>
       3층은 깔끔한 화이트 톤의 인테리어로, 2개의 방과 거실로 이루어져 있습니다.<br>
-      때문에 더욱 프라이빗한 공간과 포토존이 형성되며, 아늑하고 편안한 공간입니다.<br>
-      <br>
+      때문에 더욱 프라이빗한 공간과 포토존이 형성되며, 아늑하고 편안한 공간입니다.<br><br>
       아늑한 공간에서의 만족도는 정말 높은, 인기가 많은 공간입니다 😍
-      
     </p>
   </div>
 
   <div class="gallery">
-    <img src="../assets/floors/3F/3F_1.jpeg" alt="3F image 1">
-    <img src="../assets/floors/3F/3F_2.jpeg" alt="3F image 2">
-    <img src="../assets/floors/3F/3F_3.jpeg" alt="3F image 3">
-    <img src="../assets/floors/3F/3F_4.jpeg" alt="3F image 4">
-    <img src="../assets/floors/3F/3F_5.jpeg" alt="3F image 5">
-    <img src="../assets/floors/3F/3F_6.jpeg" alt="3F image 6">
-    <img src="../assets/floors/3F/3F_7.jpeg" alt="3F image 7">
-    <img src="../assets/floors/3F/3F_8.jpeg" alt="3F image 8">
-    <img src="../assets/floors/3F/3F_9.jpeg" alt="3F image 9">
-    <img src="../assets/floors/3F/3F_10.jpeg" alt="3F image 10">
-    <img src="../assets/floors/3F/3F_11.jpeg" alt="3F image 11">
-    <img src="../assets/floors/3F/3F_12.jpeg" alt="3F image 12">
+    <img src="/susu-homepage/assets/floors/3F/3F_1.jpeg" alt="3F image 1">
+    <img src="/susu-homepage/assets/floors/3F/3F_2.jpeg" alt="3F image 2">
+    <img src="/susu-homepage/assets/floors/3F/3F_3.jpeg" alt="3F image 3">
+    <img src="/susu-homepage/assets/floors/3F/3F_4.jpeg" alt="3F image 4">
+    <img src="/susu-homepage/assets/floors/3F/3F_5.jpeg" alt="3F image 5">
+    <img src="/susu-homepage/assets/floors/3F/3F_6.jpeg" alt="3F image 6">
+    <img src="/susu-homepage/assets/floors/3F/3F_7.jpeg" alt="3F image 7">
+    <img src="/susu-homepage/assets/floors/3F/3F_8.jpeg" alt="3F image 8">
+    <img src="/susu-homepage/assets/floors/3F/3F_9.jpeg" alt="3F image 9">
+    <img src="/susu-homepage/assets/floors/3F/3F_10.jpeg" alt="3F image 10">
+    <img src="/susu-homepage/assets/floors/3F/3F_11.jpeg" alt="3F image 11">
+    <img src="/susu-homepage/assets/floors/3F/3F_12.jpeg" alt="3F image 12">
   </div>
 </section>
 
