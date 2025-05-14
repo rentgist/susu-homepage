@@ -11,8 +11,8 @@
       font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
       padding: 0;
-      color: #333;
       line-height: 1.8;
+      color: #333;
     }
 
     main.content {
@@ -28,100 +28,121 @@
       padding-bottom: 12px;
     }
 
-    section.refund-section {
+    .subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .checklist-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 60px;
     }
 
-    .refund-box {
-      background: #fdf9f4;
+    .checklist {
+      background-color: #fdfaf6;
       padding: 32px;
       border-radius: 12px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.04);
     }
 
-    .refund-box h2 {
-      font-size: 1.3rem;
-      margin-bottom: 16px;
-      background: #f3eee8;
-      padding: 12px;
-      border-radius: 8px;
+    .checklist-header {
+      background-color: #f3eee8;
+      padding: 16px;
       text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-radius: 8px;
+      margin-bottom: 16px;
     }
 
-    .refund-box ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .refund-box ul li {
-      margin-bottom: 10px;
-    }
-
-    .refund-box p {
-      margin-bottom: 12px;
+    .checklist-sub {
+      text-align: center;
       font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    ol li {
+      margin-bottom: 16px;
+    }
+
+    ol li strong {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.95rem;
+      color: #666;
     }
 
     @media screen and (min-width: 768px) {
-      section.refund-section {
+      .checklist-wrapper {
         flex-direction: row;
         justify-content: space-between;
       }
 
-      .refund-box {
+      .checklist {
         width: 48%;
       }
     }
   </style>
 </head>
 <body>
-    <header>
-      <div class="nav">
-        <a href="/susu-homepage/index.html" class="logo">Slow House</a>
-        <nav>
-          <a href="/susu-homepage/index.html">홈</a>
-          <a href="/susu-homepage/예약현황.html">예약 현황</a>
-          <div class="dropdown">
-            <a href="#">요금&가이드 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a>
-              <a href="/susu-homepage/요금가이드/드레스.html">드레스</a>
-              <a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a>
-              <a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">공간 사진 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a>
-              <a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">테이블 세팅 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a>
-              <a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a>
-              <a href="/susu-homepage/테이블세팅/생일파티티.html">생일파티</a>
-              <a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a>
-                
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">프로포즈 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a>
-              <a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a>
-              <a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a>
-              <a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a>
-            </div>
-          </div>
-          <a href="/susu-homepage/오시는길.html">오시는 길/주차</a>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Slow House</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">홈</a></li>
+        <li><a href="../예약현황.html">예약 현황</a></li>
+        <li class="dropdown">
+          <a href="#">요금&가이드 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="요금안내.html">요금 안내</a></li>
+            <li><a href="드레스.html">드레스</a></li>
+            <li><a href="안내사항.html">안내 사항</a></li>
+            <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
+            <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">공간 사진 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
+            <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">테이블 세팅 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+            <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
+            <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
+            <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">프로포즈 ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+            <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+            <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+            <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
+          </ul>
+        </li>
+        <li><a href="../오시는길.html">오시는 길/주차</a></li>
+      </ul>
+    </nav>
+  </header>
+
 
   <main class="content">
     <h1>환불 / 청소 보증금</h1>
