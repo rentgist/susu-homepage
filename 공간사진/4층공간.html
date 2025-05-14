@@ -4,55 +4,101 @@
   <meta charset="UTF-8">
   <title>4층 공간</title>
   <link rel="stylesheet" href="/susu-homepage/css/style.css">
-  <script src="/susu-homepage/js/main.js" defer></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .gallery-intro {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .gallery-intro h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .gallery-intro p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 30%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- 공통 네비게이션 -->
-  <nav class="navbar">
-    <a href="/susu-homepage/index.html" class="logo">Slow House</a>
-    <ul class="nav-links">
-      <li><a href="/susu-homepage/index.html">홈</a></li>
-      <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
-      <li class="dropdown">
-        <a href="#">요금&amp;가이드 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
-          <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
-          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
-          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">공간 사진 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="3층공간.html">3층 공간</a></li>
-          <li><a href="4층공간.html">4층 공간</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">테이블 세팅 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
-          <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
-          <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">프로포즈 ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
-          <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
-          <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
-          <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
-        </ul>
-      </li>
-      <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
-    </ul>
-  </nav>
+<!-- ✅ 통일된 네비게이션 바 -->
+<nav class="navbar">
+  <div class="logo">Slow House</div>
+  <ul class="nav-links">
+    <li><a href="/susu-homepage/index.html">홈</a></li>
+    <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
+    <li class="dropdown">
+      <a href="#">요금&가이드 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
+        <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
+        <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
+        <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">공간 사진 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a></li>
+        <li><a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">테이블 세팅 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+        <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
+        <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
+        <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">프로포즈 ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+        <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+        <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+        <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
+      </ul>
+    </li>
+    <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
+  </ul>
+</nav>
 
-  <!-- 본문 (3층 스타일로 통일) -->
   <main class="content">
     <h1>4층 공간</h1>
 
@@ -61,18 +107,19 @@
       <p>4층은 유럽 무드의 인테리어로, 하나의 큰 방과 테라스로 구성되어 있습니다.</p>
     </div>
 
-    <div class="gallery">
-      <img src="/susu-homepage/assets/floors/4F/4F_1.jpeg" alt="4층 공간 이미지 1">
-      <img src="/susu-homepage/assets/floors/4F/4F_2.jpeg" alt="4층 공간 이미지 2">
-      <img src="/susu-homepage/assets/floors/4F/4F_3.jpeg" alt="4층 공간 이미지 3">
-      <img src="/susu-homepage/assets/floors/4F/4F_4.jpeg" alt="4층 공간 이미지 4">
-      <img src="/susu-homepage/assets/floors/4F/4F_5.jpeg" alt="4층 공간 이미지 5">
-      <img src="/susu-homepage/assets/floors/4F/4F_6.jpeg" alt="4층 공간 이미지 6">
-      <img src="/susu-homepage/assets/floors/4F/4F_7.jpeg" alt="4층 공간 이미지 7">
-      <img src="/susu-homepage/assets/floors/4F/4F_8.jpeg" alt="4층 공간 이미지 8">
-      <img src="/susu-homepage/assets/floors/4F/4F_9.jpeg" alt="4층 공간 이미지 9">
-    </div>
-  </main>
+  <div class="gallery">
+    <img src="/susu-homepage/assets/floors/4F/4F_1.jpeg" alt="4F image 1">
+    <img src="/susu-homepage/assets/floors/4F/4F_2.jpeg" alt="4F image 2">
+    <img src="/susu-homepage/assets/floors/4F/4F_3.jpeg" alt="4F image 3">
+    <img src="/susu-homepage/assets/floors/4F/4F_4.jpeg" alt="4F image 4">
+    <img src="/susu-homepage/assets/floors/4F/4F_5.jpeg" alt="4F image 5">
+    <img src="/susu-homepage/assets/floors/4F/4F_6.jpeg" alt="4F image 6">
+    <img src="/susu-homepage/assets/floors/4F/4F_7.jpeg" alt="4F image 7">
+    <img src="/susu-homepage/assets/floors/4F/4F_8.jpeg" alt="4F image 8">
+    <img src="/susu-homepage/assets/floors/4F/4F_9.jpeg" alt="4F image 9">
+
+  </div>
+</section>
 
 </body>
 </html>
