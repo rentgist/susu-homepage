@@ -6,49 +6,121 @@
   <link rel="stylesheet" href="/susu-homepage/css/style.css">
   <script src="/susu-homepage/js/main.js" defer></script>
   <style>
+    /* 본문 컨테이너 */
     .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 140px 20px 80px;
+      max-width: 960px;
+      margin: 140px auto 80px;
+      padding: 0 20px;
       font-family: 'Noto Sans KR', sans-serif;
+      color: #333;
     }
-
     h1 {
       font-size: 2rem;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
       margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
     }
 
-    .notice-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .caption {
+    /* ── 공지사항 섹션 ── */
+    .notice-section h2 {
+      font-size: 1.8rem;
+      color: #2A6EBB;
       text-align: center;
-      margin-top: 12px;
-      font-size: 0.9rem;
-      color: #666;
-      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .notice-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .notice-item {
+      border: 2px solid #2A6EBB;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: #F9FAFC;
+    }
+    .notice-item p {
+      margin: 0;
+      line-height: 1.4;
+    }
+    .notice-item p:first-child {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .notice-item span {
+      display: block;
+      margin-left: 16px;
+      font-size: 0.95rem;
+      color: #555;
     }
 
-    @media screen and (max-width: 768px) {
+    /* ── 시설 이용안내 섹션 ── */
+    .facility-section h2 {
+      font-size: 1.8rem;
+      color: #2A6EBB;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .facility-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .facility-item {
+      flex: 1;
+      min-width: 220px;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #DDD;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .facility-item .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #2A6EBB;
+    }
+    .facility-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #222;
+    }
+    .facility-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    /* ── 공통 풋노트 ── */
+    .note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.95rem;
+      color: #C33;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .notice-item, .facility-item {
+        min-width: 100%;
+      }
       .content {
-        padding: 120px 16px 60px;
+        margin: 120px auto 60px;
+        padding: 0 16px;
       }
-      h1 {
-        font-size: 1.6rem;
-      }
+      h1 { font-size: 1.6rem; }
+      .notice-section h2,
+      .facility-section h2 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- 공통 네비게이션 -->
+  <!-- 공통 내비게이션 -->
   <nav class="navbar">
     <a href="/susu-homepage/index.html" class="logo">Slow House</a>
     <ul class="nav-links">
@@ -59,8 +131,8 @@
         <ul class="dropdown-menu">
           <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
           <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
-          <li><a href="/susu-homepage/요금가이드/안내사항.html">안내사항</a></li>
-          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
+          <li><a href="/susu-homepage/요금가이드/안내사항.html">안내 사항</a></li>
+          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
           <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
         </ul>
       </li>
@@ -93,19 +165,75 @@
     </ul>
   </nav>
 
-  <!-- 페이지 콘텐츠 -->
-  <section class="content">
+  <main class="content">
     <h1>안내 사항</h1>
 
-    <img src="../assets/info/notice-guide.png"
-         alt="공지사항 및 시설이용안내"
-         class="notice-image">
+    <!-- 공지사항 -->
+    <section class="notice-section">
+      <h2>공지사항</h2>
+      <div class="notice-wrapper">
+        <div class="notice-item">
+          <p>1. 입실 시, 반드시 <strong>비치된 슬리퍼를 착용</strong>해 주시기 바랍니다.</p>
+          <span>촬영용 신발은 테이프 등을 부착하여 바닥 및 벽면 파손에 주의</span>
+        </div>
+        <div class="notice-item">
+          <p>2. 시설 내 패브릭, 가구, 벽면 등은 <strong>오염에 취약</strong>하오니 주의 바랍니다.</p>
+        </div>
+        <div class="notice-item">
+          <p>3. 예약 시간을 기준으로 일찍 퇴실 시 환불은 불가능합니다.</p>
+        </div>
+        <div class="notice-item">
+          <p>4. 이용 시간에는 장비 철수, 청소 등 마무리 시간이 포함됩니다.</p>
+        </div>
+        <div class="notice-item">
+          <p>5. <strong>시간 연장은 30분 단위로 가능</strong>하며, 별도 연장 없이 예약 시간 초과 시<br>
+             15분당 10,000원 추가 청구합니다.</p>
+        </div>
+        <div class="notice-item">
+          <p>6. <strong>냉난방기 전원 OFF 여부, 물품 파손 및 오염 확인</strong> 후 보증금을 반환합니다.<br>
+             보증금은 퇴실 후 24시간 이내 반환됩니다.</p>
+        </div>
+        <div class="notice-item">
+          <p>7. 시설 이용 시, 본인 부주의로 인한 사고·사고는 책임지지 않습니다.<br>
+             화재, 낙상, 문 손끼임, 계단 넘어짐, 물건 분실 등</p>
+        </div>
+        <div class="notice-item">
+          <p>8. 4층 테라스를 포함하여 시설 내 모든 곳은 <strong>금연구역</strong>입니다.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="caption">
-      - 공지사항<br>
-      - 시설 이용안내
+    <!-- 시설 이용안내 -->
+    <section class="facility-section">
+      <h2>시설 이용안내</h2>
+      <div class="facility-wrapper">
+        <div class="facility-item">
+          <div class="icon">📹</div>
+          <h3>CCTV 녹화</h3>
+          <p>고객님들의 안전, 도난 방지, 물품 훼손 방지 등을 위해<br>시설 내 CCTV가 설치되어 있습니다.</p>
+        </div>
+        <div class="facility-item">
+          <div class="icon">⚠️</div>
+          <h3>파손 및 오염, 훼손 주의</h3>
+          <p>가구 및 소품 이동은 자유이나 벽 파손, 바닥 긁힘<br>그리고 오염 및 훼손에 각별한 주의 부탁드립니다.</p>
+        </div>
+        <div class="facility-item">
+          <div class="icon">🚭</div>
+          <h3>금연 및 화기 사용 금지</h3>
+          <p>시설 내 모든 곳이 금연구역이며, 화기 사용 절대 금지입니다.</p>
+        </div>
+        <div class="facility-item">
+          <div class="icon">📶</div>
+          <h3>무선 인터넷</h3>
+          <p>3F: slowhouse3F / slowhouse3F#<br>4F: slowhouse4F / slowhouse4F#</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      패브릭 오염 및 물품 파손 시 물품가액이 청구됩니다.<br>
+      많은 분들이 사용하시는 만큼 소중한 사용 부탁드립니다.
     </div>
-  </section>
-
+  </main>
 </body>
 </html>
