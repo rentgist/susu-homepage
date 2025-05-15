@@ -143,3 +143,9 @@ body {
   flex-shrink: 0;
   object-fit: cover;
 }
+
+
+/* 항상 수직 스크롤바를 표시하도록 */
+html {
+  overflow-y: scroll;
+}
