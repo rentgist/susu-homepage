@@ -106,13 +106,6 @@ body {
   padding: 50px 20px;
 }
 
-.slider {
-  max-width: 800px;
-  margin: 0 auto; /* 가운데 정렬 */
-  position: relative;
-  overflow: hidden;
-}
-
 /* 네비게이션 모든 링크(visited 포함)를 동일한 색으로 고정 */
 .navbar a,
 .navbar a:visited {
@@ -125,24 +118,6 @@ body {
   color: #000;
 }
 
-/* 슬라이더 래퍼: 한 화면에 하나만 보이도록 overflow 숨김 */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
-
-/* 실제 이미지 묶음: flex row + 부드러운 애니메이션 */
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-/* 각 이미지: 슬라이더 너비만큼 고정 */
-.slides img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
 
 
 /* 항상 수직 스크롤바를 표시하도록 */
@@ -186,16 +161,51 @@ html {
   background: rgba(0,0,0,0.7);
 }
 
-/* ─── 슬라이더 뷰포트 너비를 70%로 고정하고 중앙 정렬 ─── */
+/* ─── 슬라이더 전체 ─── */
 .slider {
-  width: 70%;        /* 화면 너비의 70% 만큼만 보여줌 */
-  margin: 0 auto;    /* 가로 중앙 정렬 */
-  overflow: hidden;  /* 뷰포트 바깥 부분은 잘림 처리 */
+  position: relative;  /* 버튼 절대위치 기준 */
+  overflow: hidden;    /* 뷰포트 바깥은 잘림 처리 */
+  width: 70%;          /* 화면 너비의 70% */
+  margin: 0 auto;      /* 가로 중앙 정렬 */
 }
 
-/* ─── 각 이미지가 뷰포트 너비에 딱 맞도록 ─── */
+/* ─── 슬라이드 묶음 ─── */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ─── 각 이미지 ─── */
 .slides img {
-  width: 100%;       /* .slider 너비만큼 꽉 채움 */
+  width: 100%;      /* .slider 너비에 딱 맞춤 */
   flex-shrink: 0;
   object-fit: cover;
+}
+
+/* ─── 버튼 중앙 배치 ─── */
+.slider button.prev,
+.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.slider button.prev { left: 10px; }
+.slider button.next { right: 10px; }
+
+/* ─── 버튼 호버 효과 ─── */
+.slider button.prev:hover,
+.slider button.next:hover {
+  background: rgba(0,0,0,0.7);
 }
