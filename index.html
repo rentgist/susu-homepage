@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Slow House</title>
-  <link rel="stylesheet" href="/susu-homepage/css/style.css">
-  <script src="/susu-homepage/js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>드레스</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/main.js" defer></script>
+  <style>
+    /* content 영역 스타일은 그대로 둡니다 */
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    main.content {
+      max-width: 960px;
+      margin: 140px auto 80px;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 50px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    .btn-wrapper {
+      text-align: center;
+      margin: 60px 0 0;
+    }
+    .btn-wrapper a {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-wrapper a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    @media screen and (max-width: 768px) {
+      main.content {
+        margin: 120px auto 60px;
+        padding: 0 16px;
+      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
 </head>
 <body>
-
   <!-- ✅ 통일된 네비게이션 바 -->
   <nav class="navbar">
     <div class="logo">Slow House</div>
