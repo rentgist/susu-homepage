@@ -3,105 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <title>예약 현황</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="/susu-homepage/css/style.css">
+  <script src="/susu-homepage/js/main.js" defer></script>
   <style>
+    /* 페이지 전용 스타일 */
     .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 140px 20px 60px;
+      max-width: 960px;
+      margin: 140px auto 60px;
+      padding: 0 20px;
       font-family: 'Helvetica Neue', sans-serif;
       line-height: 1.6;
     }
-
     .content h1 {
       font-size: 2rem;
       text-align: center;
       margin-bottom: 30px;
     }
-
     .calendar-container {
       display: flex;
       justify-content: center;
     }
-
-    iframe {
-      border: none;
+    .calendar-container iframe {
       width: 100%;
-      max-width: 1000px;
+      max-width: 960px;
       height: 700px;
+      border: none;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
-    @media screen and (max-width: 768px) {
-      iframe {
-        height: 600px;
-      }
-
+    @media (max-width: 768px) {
       .content {
-        padding: 120px 16px 40px;
+        margin: 120px auto 40px;
+        padding: 0 16px;
+      }
+      .calendar-container iframe {
+        height: 600px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 상단 네비게이션 -->
-          <div class="nav">
-        <a href="/susu-homepage/index.html" class="logo">Slow House</a>
-        <nav>
-          <a href="/susu-homepage/index.html">홈</a>
-          <a href="/susu-homepage/예약현황.html">예약 현황</a>
-          <div class="dropdown">
-            <a href="#">요금&가이드 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a>
-              <a href="/susu-homepage/요금가이드/드레스.html">드레스</a>
-              <a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a>
-              <a href="/susu-homepage/요금가이드/환불청소보증금.html">환불보증금</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">공간 사진 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a>
-              <a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">테이블 세팅 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a>
-              <a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a>
-              <a href="/susu-homepage/테이블세팅/생일파티티.html">생일파티</a>
-              <a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a>
-                
-            </div>
-          </div>
-          <div class="dropdown">
-            <a href="#">프로포즈 ▾</a>
-            <div class="dropdown-content">
-              <a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a>
-              <a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a>
-              <a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a>
-              <a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a>
-            </div>
-          </div>
-          <a href="/susu-homepage/오시는길.html">오시는 길/주차</a>
-        </nav>
+  <!-- 공통 내비게이션 -->
+  <nav class="navbar">
+    <a href="/susu-homepage/index.html" class="logo">Slow House</a>
+    <ul class="nav-links">
+      <li><a href="/susu-homepage/index.html">홈</a></li>
+      <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
+      <li class="dropdown">
+        <a href="#">요금&amp;가이드 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
+          <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
+          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실수칙</a></li>
+          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">공간 사진 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a></li>
+          <li><a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">테이블 세팅 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
+          <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">프로포즈 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+          <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+          <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+          <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
+    </ul>
+  </nav>
 
-  <!-- 본문 콘텐츠 -->
-  <section class="content">
+  <!-- 본문 -->
+  <main class="content">
     <h1>예약 현황</h1>
     <div class="calendar-container">
-      <iframe 
+      <iframe
         src="https://calendar.google.com/calendar/embed?src=6760e905bbff6326f3e79f1492986492db028b773d907955ed89e3a2fd66b11d%40group.calendar.google.com&ctz=Asia%2FSeoul"
-        frameborder="0" 
         scrolling="no">
       </iframe>
     </div>
-  </section>
+  </main>
 
 </body>
 </html>
