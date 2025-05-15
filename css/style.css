@@ -188,7 +188,7 @@ html {
 
 /* ❶ 슬라이더 뷰포트 너비를 80%로 고정, 중앙 정렬 */
 .slider {
-  width: 80%;          /* 화면 너비의 80% 만큼만 보여줌 */
+  width: 60%;          /* 화면 너비의 80% 만큼만 보여줌 */
   margin: 0 auto;      /* 가운데 정렬 */
   overflow: hidden;    /* 뷰포트 밖 잘림 처리 */
   position: relative;  /* 버튼 절대위치 기준 */
