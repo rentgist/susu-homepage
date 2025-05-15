@@ -59,6 +59,77 @@
       h2 { font-size: 1.1rem; }
     }
   </style>
+
+  <style>
+  /* ─── 체크리스트 카드 스타일 ─── */
+  .subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #444;
+  }
+
+  .checklist-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .checklist {
+    background-color: #fdfaf6;
+    padding: 32px;
+    border-radius: 12px;
+  }
+
+  .checklist-header {
+    background-color: #f3eee8;
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .checklist-sub {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 24px;
+  }
+
+  ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  ol li {
+    margin-bottom: 16px;
+  }
+
+  ol li strong {
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  @media screen and (min-width: 768px) {
+    .checklist-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .checklist {
+      width: 48%;
+    }
+  }
+</style>
+
 </head>
 <body>
 
