@@ -6,125 +6,71 @@
   <link rel="stylesheet" href="/susu-homepage/css/style.css">
   <script src="/susu-homepage/js/main.js" defer></script>
   <style>
-    /* ── 본문 레이아웃 ── */
-    .content {
-      max-width: 960px;
-      margin: 140px auto 80px;
-      padding: 0 20px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 24px;
-      border-bottom: 2px solid #333;
-      padding-bottom: 12px;
-    }
+    /* ── 본문 레이아웃 & 카드 스타일 (기존 그대로) ── */
+    .content { max-width: 960px; margin: 140px auto 80px; padding: 0 20px; }
+    h1 { font-size: 2rem; margin-bottom: 24px; border-bottom: 2px solid #333; padding-bottom: 12px; }
 
-    /* ── 카드 컨테이너 ── */
-    .pricing-card {
-      background-color: #fdfaf6;
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .pricing-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 16px;
-    }
-    .pricing-column {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    /* ── 각 섹션 헤더 ── */
-    .pricing-column .header {
-      background-color: #f3eee8;
-      padding: 12px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 8px 8px 0 0;
-      margin: -24px -24px 12px;
-    }
-
-    /* ── 목록 스타일 ── */
-    .pricing-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .pricing-list li {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px dotted #ccc;
-      font-size: 0.95rem;
-    }
-    .pricing-list li:last-child {
-      border-bottom: none;
-    }
-
-    /* ── 반응형 ── */
-    @media (max-width: 768px) {
-      .pricing-columns {
-        flex-direction: column;
-      }
-    }
+    .pricing-card { background: #fdfaf6; border-radius: 12px; padding: 24px; }
+    .pricing-columns { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 16px; }
+    .pricing-column { flex: 1; min-width: 200px; }
+    .pricing-column .header { background: #f3eee8; padding: 12px; text-align: center; font-weight: bold; border-radius: 8px 8px 0 0; margin: -24px -24px 12px; }
+    .pricing-list { list-style: none; margin: 0; padding: 0; }
+    .pricing-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dotted #ccc; font-size: .95rem; }
+    .pricing-list li:last-child { border-bottom: none; }
+    @media (max-width: 768px) { .pricing-columns { flex-direction: column; } }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Slow House</div>
-      <ul class="nav-links">
-        <li><a href="../index.html">홈</a></li>
-        <li><a href="../예약현황.html">예약 현황</a></li>
-        <li class="dropdown">
-          <a href="#">요금&가이드 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="요금안내.html">요금 안내</a></li>
-            <li><a href="드레스.html">드레스</a></li>
-            <li><a href="안내사항.html">안내 사항</a></li>
-            <li><a href="퇴실수칙.html">퇴실 수칙</a></li>
-            <li><a href="환불청소보증금.html">환불/청소 보증금</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">공간 사진 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="../공간사진/3층공간.html">3층 공간</a></li>
-            <li><a href="../공간사진/4층공간.html">4층 공간</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">테이블 세팅 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="../테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
-            <li><a href="../테이블세팅/생일파티.html">생일파티</a></li>
-            <li><a href="../테이블세팅/베이비샤워.html">베이비샤워</a></li>
-            <li><a href="../테이블세팅/연말세팅.html">연말 세팅</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">프로포즈 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="../프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
-            <li><a href="../프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
-            <li><a href="../프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
-            <li><a href="../프로포즈/가져가실것.html">가져가실 것</a></li>
-          </ul>
-        </li>
-        <li><a href="../오시는길.html">오시는 길/주차</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 공통 내비게이션 -->
+  <nav class="navbar">
+    <a href="/susu-homepage/index.html" class="logo">Slow House</a>
+    <ul class="nav-links">
+      <li><a href="/susu-homepage/index.html">홈</a></li>
+      <li><a href="/susu-homepage/예약현황.html">예약 현황</a></li>
+      <li class="dropdown">
+        <a href="#">요금&amp;가이드 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/요금가이드/요금안내.html">요금 안내</a></li>
+          <li><a href="/susu-homepage/요금가이드/드레스.html">드레스</a></li>
+          <li><a href="/susu-homepage/요금가이드/안내사항.html">안내 사항</a></li>
+          <li><a href="/susu-homepage/요금가이드/퇴실수칙.html">퇴실 수칙</a></li>
+          <li><a href="/susu-homepage/요금가이드/환불청소보증금.html">환불/청소 보증금</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">공간 사진 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/공간사진/3층공간.html">3층 공간</a></li>
+          <li><a href="/susu-homepage/공간사진/4층공간.html">4층 공간</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">테이블 세팅 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/테이블세팅/브라이덜샤워.html">브라이덜샤워</a></li>
+          <li><a href="/susu-homepage/테이블세팅/생일파티.html">생일파티</a></li>
+          <li><a href="/susu-homepage/테이블세팅/베이비샤워.html">베이비샤워</a></li>
+          <li><a href="/susu-homepage/테이블세팅/연말세팅.html">연말세팅</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">프로포즈 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/susu-homepage/프로포즈/프로포즈가이드.html">프로포즈 가이드</a></li>
+          <li><a href="/susu-homepage/프로포즈/3층프로포즈.html">3층 프로포즈</a></li>
+          <li><a href="/susu-homepage/프로포즈/4층프로포즈.html">4층 프로포즈</a></li>
+          <li><a href="/susu-homepage/프로포즈/가져가실것.html">가져가실 것</a></li>
+        </ul>
+      </li>
+      <li><a href="/susu-homepage/오시는길.html">오시는 길/주차</a></li>
+    </ul>
+  </nav>
 
-  <!-- 요금 안내 -->
+  <!-- 요금 안내 콘텐츠 -->
   <main class="content">
     <h1>요금 안내</h1>
-
     <div class="pricing-card">
       <div class="pricing-columns">
-
         <!-- 공간대여 -->
         <div class="pricing-column">
           <div class="header">공간대여</div>
@@ -134,21 +80,15 @@
             <li><span>상업 촬영 공간대여</span><span>20,000원</span></li>
           </ul>
         </div>
-
         <!-- 테이블 세팅 -->
         <div class="pricing-column">
           <div class="header">테이블 세팅</div>
           <ul class="pricing-list">
             <li><span>연말 테이블세팅</span><span>30,000원</span></li>
-            <li>
-              <span>파티 테이블세팅<br>
-                    (브라이덜샤워, 생일파티, 베이비샤워)</span>
-              <span>40,000원</span>
-            </li>
+            <li><span>파티 테이블세팅<br>(브라이덜샤워, 생일파티, 베이비샤워)</span><span>40,000원</span></li>
             <li><span>로맨틱 테이블세팅</span><span>30,000원</span></li>
           </ul>
         </div>
-
         <!-- 옵션 -->
         <div class="pricing-column">
           <div class="header">옵션</div>
@@ -160,11 +100,8 @@
             <li><span>인원추가</span><span>5,000원</span></li>
           </ul>
         </div>
-
       </div>
     </div>
   </main>
-
 </body>
-
 </html>
