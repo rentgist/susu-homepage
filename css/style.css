@@ -149,3 +149,39 @@ body {
 html {
   overflow-y: scroll;
 }
+
+
+/* ─── 버튼을 이미지 중앙 좌·우에 배치 ─── */
+.slider {
+  position: relative;
+}
+
+/* 공통 버튼 스타일 */
+.slider button.prev,
+.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* 왼쪽, 오른쪽 위치 지정 */
+.slider button.prev { left: 10px; }
+.slider button.next { right: 10px; }
+
+/* 호버 시 버튼 강조 (선택사항) */
+.slider button.prev:hover,
+.slider button.next:hover {
+  background: rgba(0,0,0,0.7);
+}
