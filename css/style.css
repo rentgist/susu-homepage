@@ -186,9 +186,17 @@ html {
   background: rgba(0,0,0,0.7);
 }
 
-.slides {
-  justify-content: center;
+/* ❶ 슬라이더 뷰포트 너비를 80%로 고정, 중앙 정렬 */
+.slider {
+  width: 80%;          /* 화면 너비의 80% 만큼만 보여줌 */
+  margin: 0 auto;      /* 가운데 정렬 */
+  overflow: hidden;    /* 뷰포트 밖 잘림 처리 */
+  position: relative;  /* 버튼 절대위치 기준 */
 }
+
+/* ❷ 이미지가 뷰포트 너비(70%)에 딱 맞게 */
 .slides img {
-  width: 80%;
+  width: 100%;         /* .slider 너비에 맞춰 1장만 꽉 채움 */
+  flex-shrink: 0;      
+  object-fit: cover;
 }
