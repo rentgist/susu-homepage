@@ -124,3 +124,22 @@ body {
 .navbar a:hover {
   color: #000;
 }
+
+/* 슬라이더 래퍼: 한 화면에 하나만 보이도록 overflow 숨김 */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 실제 이미지 묶음: flex row + 부드러운 애니메이션 */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* 각 이미지: 슬라이더 너비만큼 고정 */
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
