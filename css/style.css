@@ -165,7 +165,7 @@ html {
 .slider {
   position: relative;  /* 버튼 절대위치 기준 */
   overflow: hidden;    /* 뷰포트 바깥은 잘림 처리 */
-  width: 70%;          /* 화면 너비의 70% */
+  width: 40%;          /* 화면 너비의 70% */
   margin: 0 auto;      /* 가로 중앙 정렬 */
 }
 
