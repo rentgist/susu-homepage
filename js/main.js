@@ -2,11 +2,14 @@ let currentSlide = 0;
 
 function showSlide(index) {
     const slides = document.querySelectorAll(".slides img");
-    if (!slides.length) return;
+    const container = document.querySelector(".slides");
+    if (!slides.length || !container) return;
 
-    slides.forEach(slide => slide.classList.remove("active"));
+    // 1) 인덱스 순환
     currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add("active");
+
+    // 2) 컨테이너 이동
+    container.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
 function moveSlide(step) {
